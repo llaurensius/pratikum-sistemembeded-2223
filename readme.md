@@ -5,7 +5,7 @@ Proyek tugas kuliah mata kuliah Sistem Embeded Progam Studi D4 Teknik Telekomuni
 [![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white)](https://www.arduino.cc/)
 
 
-## Acknowledgements
+## List Jobsheet
 
  - [Jobsheet 1 - DASAR PEMROGRAMAN ESP32 UNTUK PEMROSESAN DATA INPUT/OUTPUT ANALOG DAN DIGITAL](https://github.com/llaurensius/pratikum-sistemembeded-2223/tree/main/jobsheet-1)
  - [Jobsheet 2 - PROTOKOL KOMUNIKASI DAN SENSOR](https://github.com/llaurensius/pratikum-sistemembeded-2223/tree/main/jobsheet-2)
