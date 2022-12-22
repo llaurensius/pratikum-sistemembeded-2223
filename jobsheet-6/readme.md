@@ -2,7 +2,7 @@ Project tugas kuliah Sistem Embeded 22/23
 
 Progam Studi D4 Teknik Telekomunikasi Politeknik Negeri Semarang
 
-Jobsheet 3 - TOPOLOGI JARINGAN LOKAL DAN WIFI
+Jobsheet 6 - THINGSPEAK (HTTP/REST) + SENSOR (XX)
 
 Anggota Kelompok
 

@@ -2,7 +2,7 @@ Project tugas kuliah Sistem Embeded 22/23
 
 Progam Studi D4 Teknik Telekomunikasi Politeknik Negeri Semarang
 
-Jobsheet 3 - TOPOLOGI JARINGAN LOKAL DAN WIFI
+Jobsheet 5 - ADAFRUIT.IO (MQTT) + IFTTF + SENSOR (XX) + SUARA (GOOGLE ASSITANT)
 
 Anggota Kelompok
 
