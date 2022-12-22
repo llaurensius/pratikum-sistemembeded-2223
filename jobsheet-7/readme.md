@@ -1,11 +1,12 @@
-Project tugas kuliah Sistem Embeded 22/23
 
-Progam Studi D4 Teknik Telekomunikasi Politeknik Negeri Semarang
+# Jobsheet 7
+ESP-NOW (MANY TO ONE) + CAYENNE + SENSOR (DHT11)
 
-Jobsheet 7 - ESP-NOW (MANY TO ONE) + CAYENNE + SENSOR (DHT11)
+[![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white)](https://www.arduino.cc/)
 
-Anggota Kelompok
 
-Azarya Paska Saputra 4.31.20.0.05
+## Anggota Kelompok
 
-Laurensius Liquori Igridfian 4.31.20.0.13
+- [Azarya Paska Saputra - 4.31.20.0.05](https://github.com/azpaska)
+- [Laurensius Liquori - 4.31.20.0.13](https://github.com/llaurensius)
+
