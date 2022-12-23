@@ -26,3 +26,17 @@ Fungsi pinMode adalah menginisiasi GPIO yang akan dijadikan output.
 }
 ```
 
+Fungsi void loop() dijalankan setelah fungsi setup() sudah selesai dijalankan, void loop() bertujuan untuk mengeksekusi dan menjalankan program yang sudah dibuat. Fungi ini akan secara aktif mengontrol board Arduino baik membaca input atau merubah output.
+
+```
+void loop() {
+```
+
+Fungsi digitalWrite adalah mengeksesi output (LED) untuk hidup dan mati.
+Fungsi dari delay adalah mengatur waktu berhenti sebelum mengeksekusi perintah selanjutnya.
+```
+  digitalWrite(5, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(100);                       // wait for a second
+  digitalWrite(5,LOW);    // turn the LED off by making the voltage LOW
+  delay(100);     
+```
