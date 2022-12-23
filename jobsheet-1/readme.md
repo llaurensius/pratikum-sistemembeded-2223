@@ -40,3 +40,5 @@ Fungsi dari delay adalah mengatur waktu berhenti sebelum mengeksekusi perintah s
   digitalWrite(5,LOW);    // turn the LED off by making the voltage LOW
   delay(100);     
 ```
+
+Dalam percobaan selanjutnya LED akan berubah ubah jeda waktu antara hidup dan matinya
