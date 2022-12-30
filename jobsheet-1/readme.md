@@ -117,5 +117,10 @@ if (button1 == HIGH) {
 ## Analisa PWM
 
 
+
+
+
+
 # Dokumentasi
 ## GPIO
+https://user-images.githubusercontent.com/118155742/210073593-e0bb21a0-879f-4291-b16d-23c9d7c4c185.mp4
