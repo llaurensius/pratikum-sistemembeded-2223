@@ -117,8 +117,51 @@ if (button1 == HIGH) {
 ## Analisa PWM
 
 
+Dalam Pemrogaman PWM kedua diberikan contoh untuk melihat efek PWM yaitu output lampu LED akan hidup dengan power dimulai dari 0% hingga 100% secara perlahan dan kembali dari 100% ke 0% secara perlahan dan berulang-ulang. Pada percobaan pertama diberikan contoh hanya dengan satu LED saja kemudian pada percobaan kedua diberikan contoh dengan 3 LED sekaligus
 
+Fungsi dari input data ditunjukan dalam koding
+```
+// increase the LED brightness
+for(int dutyCycle = 0; dutyCycle <= 255; dutyCycle++){   
+// changing the LED brightness with PWM 
+ledcWrite(ledChannel, dutyCycle);
+delay(15); 
+}
+// decrease the LED brightness
+for(int dutyCycle = 255; dutyCycle >= 0; dutyCycle--){ 
+// changing the LED brightness with PWM 
+ledcWrite(ledChannel, dutyCycle);   
+delay(15); 
+}
+```
 
+## ADC DAC
+Dalam pekerjaan Analog Digital Converter dan Digital Analog Converter dicontohkan dengan membaca input dari sebuah potensiometer yang diterjemahkan secara digital melalui pemrogaman sebagai berikut.
+```
+potValue = analogRead(potPin); 
+delay(500);
+volt = potValue*5/4095;
+Serial.println("Nilai ADC");
+Serial.println(potValue);
+Serial.println("Nilai Tegangan");
+Serial.println(volt);
+```
+Fungsi ini akan membaca setiap putaran potensio dan menghasilkan angka sesuai dengan putaran potensiometer.
+
+Percobaan ADC DAC kedua mengimplementasikan angka yang dibaca oleh ESP32 menjadi nyala lampu LED, jika potensiometer diputar yang paling kecil maka LED tidak menyala dan sebaliknya jika potensiometer diputar pada kapasitas maksimum maka LED akan nyala paling terang. Koding untuk percobaan kedua yang berfungsi untuk membaca dan memberikan perintah ke LED untuk menyala adalah sebagai berikut.
+```
+sensorValue = analogRead(analogInPin); // read the analog in value:
+outputValue = map(sensorValue, 0, 4095, 0, 255); // map it to the range of the analog out:
+ledcWrite(ledChannel, outputValue); // change the analog out value:
+// print the results to the Serial Monitor:
+Serial.print("sensor = ");
+Serial.print(sensorValue);
+Serial.print("\t output = ");
+Serial.println(outputValue);
+// wait 2 milliseconds before the next loop for the analog-to-digital 
+// converter to settle after the last reading:
+delay(500);
+```
 
 
 # Dokumentasi
@@ -146,3 +189,11 @@ https://user-images.githubusercontent.com/118155742/210073593-e0bb21a0-879f-4291
 
 https://user-images.githubusercontent.com/118155742/210074424-23869e47-c522-4863-9fd2-a46d586e8795.mp4
 
+
+## ADC & DAC
+
+
+https://user-images.githubusercontent.com/118155742/210075850-ed103514-8303-4f57-9a01-782e828895ee.mp4
+
+
+![adc dac two](https://user-images.githubusercontent.com/118155742/210075481-813937f8-3c8a-42dd-a7f8-2ca4174be2db.jpg)
