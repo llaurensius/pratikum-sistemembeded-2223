@@ -26,7 +26,7 @@ Fungsi pinMode adalah menginisiasi GPIO yang akan dijadikan output.
 }
 ```
 
-Fungsi void loop() dijalankan setelah fungsi setup() sudah selesai dijalankan, void loop() bertujuan untuk mengeksekusi dan menjalankan program yang sudah dibuat. Fungi ini akan secara aktif mengontrol board Arduino baik membaca input atau merubah output.
+Fungsi void loop() dijalankan setelah fungsi setup() sudah selesai dijalankan, void loop() bertujuan untuk mengeksekusi dan menjalankan program yang sudah dibuat. Fungi ini akan secara aktif mengontrol board ESP32 membaca input atau merubah output.
 
 ```
 void loop() {
@@ -51,8 +51,18 @@ Fungsi void setup() dijalankan pada saat sketch atau program Arduino mulai. Fung
 void setup() {
 ```
  
-Fungsi void loop() dijalankan setelah fungsi setup() sudah selesai dijalankan, void loop() bertujuan untuk mengeksekusi dan menjalankan program yang sudah dibuat. Fungi ini akan secara aktif mengontrol board Arduino baik membaca input atau merubah output.
+Fungsi void loop() dijalankan setelah fungsi setup() sudah selesai dijalankan, void loop() bertujuan untuk mengeksekusi dan menjalankan program yang sudah dibuat. Fungi ini akan secara aktif mengontrol board EPS32 baik membaca input atau merubah output.
 
 ```
 void loop() {
+```
+
+Menginisiasi input dari ESP32 yang akan dibaca oleh ESP dengan perintah. Button akan terhubung di pin 15,2,4 dari ESP32 dan LED akan keluar pada 5,18,19
+```
+const int buttonPin1 = 15;  // the number of the pushbutton pin 
+const int buttonPin2 = 2;
+const int buttonPin3 = 4;
+const int ledPin1 =  5;    // the number of the LED pin
+const int ledPin2 =  18;
+const int ledPin3 =  19;
 ```
