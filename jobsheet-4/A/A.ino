@@ -28,9 +28,8 @@ void setup() {
   Serial.begin(9600);
   dht.begin();
   Cayenne.begin(username, password, clientID, ssid, wifiPassword);
-    pinMode(ledPin, OUTPUT);
+  pinMode(ledPin, OUTPUT);
   digitalWrite(ledPin, LOW);
-  //  pinMode (D4, OUTPUT);
 }
 float h, t, f;
 void loop() {
@@ -64,4 +63,4 @@ CAYENNE_OUT(2)
 CAYENNE_IN(3)
 {
   digitalWrite(ledPin, !getValue.asInt());  // to get the value from the website
-} 
+}
