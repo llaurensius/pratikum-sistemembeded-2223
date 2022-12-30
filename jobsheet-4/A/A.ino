@@ -1,8 +1,7 @@
-//#define CAYENNE_DEBUG
-#define CAYENNE_PRINT Serial
 #include "CayenneMQTTESP32.h" // ganti tanda " dengan > jika program error
 #include "DHT.h"
-
+//#define CAYENNE_DEBUG
+#define CAYENNE_PRINT Serial
 #define DHTPIN 2     // what digital pin we're connected to
 // Feather HUZZAH ESP8266 note: use pins 3, 4, 5, 12, 13 or 14 --
 // Pin 15 can work but DHT must be disconnected during program upload.
@@ -16,6 +15,7 @@
 char ssid[] = "k";
 char wifiPassword[] = "123456779";
 const int ledPin = 16;
+
 // Cayenne authentication info. This should be obtained from the Cayenne Dashboard.
 char username[] = "9f1901b0-7f54-11ed-b193-d9789b2af62b";
 char password[] = "15d7c1af5defe0be2d748a44ebec74251ae13b9e";
@@ -50,6 +50,7 @@ void loop() {
 
 }
 
+//Mengirimkan data ke MQTT Cayenne dan menampilkannya di Dashboard Aplikasi Cayenne
 CAYENNE_OUT(1)
 {
   CAYENNE_LOG("Send data for Virtual Channel %d Suhu %f C", 1, t);
