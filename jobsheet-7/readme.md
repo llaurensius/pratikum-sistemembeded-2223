@@ -10,6 +10,10 @@ ESP-NOW (MANY TO ONE) + CAYENNE + SENSOR (DHT11)
 - [Azarya Paska Saputra - 4.31.20.0.05](https://github.com/azpaska)
 - [Laurensius Liquori - 4.31.20.0.13](https://github.com/llaurensius)
 
+## Skematik
+![image](https://user-images.githubusercontent.com/118155742/210129990-1018d897-059b-447a-8e66-28f8216831c3.png)
+
+
 ## Analisa
 Dalam pratikum ini memakai protokol ESP-NOW berjumlah 3 buah ESP32 yang terbagiatas 2 buah ESP32 sebagai Sender dengan terhubung sensor DHT11 dan 1 buah ESP32 sebagai Receive/Koordinator yang akan mengirimkan nilai sensor dari 2 buah ESP32 tadi ke Cayenne.
 
