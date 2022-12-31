@@ -4,8 +4,16 @@
 - [Azarya Paska Saputra - 4.31.20.0.05](https://github.com/azpaska)
 - [Laurensius Liquori - 4.31.20.0.13](https://github.com/llaurensius)
 
+## Daftar Isi
+  * [Hasil Percobaan](#hasil-percobaan)
+  * [Analisa](#analisa)
+  * [Kesimpulan](#kesimpulan)
+
+
 ## Hasil Percobaan
-    A.	ESP32 Wi-Fi Modes dan Wifi-Scan
+
+A.	ESP32 Wi-Fi Modes dan Wifi-Scan<br /><br />
+*Program*
 ```c
 #include "WiFi.h"
 void setup() {
@@ -43,7 +51,60 @@ void loop() {
   delay(5000);
 }
 ```
+*Serial Monitor*
 ![js3.1](https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.1/3.1.jpg)
+
+B. Menghubungkan ESP32 dengan Jaringan WiFi<br /><br />
+*Program*
+ ```c
+    #include <WiFi.h>
+    // Replace with your network credentials (STATION)
+    const char* ssid = "ka";
+    const char* password = "123456788";
+    void initWiFi() {
+      WiFi.mode(WIFI_STA);
+      WiFi.begin(ssid, password);
+      Serial.print("Connecting to WiFi ..");
+      while (WiFi.status() != WL_CONNECTED) {
+      Serial.print('.');
+      delay(1000);
+      }
+    Serial.println(WiFi.localIP());
+    }
+    void setup() {
+      Serial.begin(115200);
+      initWiFi();
+      Serial.print("RRSI: ");
+      Serial.println(WiFi.RSSI());
+      }
+    void loop() {
+     // put your main code here, to run repeatedly:
+    }
+```
+*Serial Monitor*
+![js3.2](https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.2/3.2.jpg)
+
+C.	Menghubungkan Kembali (Re-connect) ESP32 dengan Jaringan Wi-Fin<br /><br />
+*Program*
+```c
+```
+*Serial Monitor*
+![]()
+
+D.	Mengganti Hostname ESP32<br /><br />
+*Program*
+```c
+```
+*Serial Monitor*
+![]()
+
+E.	Mengirim Data Sensor ke Database<br /><br />
+*Program*
+```c
+```
+*Serial Monitor*
+![]()
+    
 
 
 ## Analisa
