@@ -24,9 +24,9 @@ void loop() {
   if (n == 0) {
   Serial.println("no networks found");
   } else {
-   Serial.print(n);
-   Serial.println(" networks found");
-   for (int i = 0; i < n; ++i) {
+    Serial.print(n);
+    Serial.println(" networks found");
+    for (int i = 0; i < n; ++i) {
       // Print SSID and RSSI for each network found
       Serial.print(i + 1);
       Serial.print(": ");
