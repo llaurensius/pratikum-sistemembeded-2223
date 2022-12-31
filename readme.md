@@ -27,4 +27,4 @@
  
  <p>&nbsp;</p> 
  
- <p align="center"><a href="https://www.espressif.com/en/products/socs/esp32)"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Logo-Polines-96dpi-200px.pn](https://www.espressif.com/sites/all/themes/espressif/logo-black.svg" alt="Espressif ESP32" width="200"></a></p>
+ <p align="center"><a href="https://www.espressif.com/en/products/socs/esp32"><img src="https://www.espressif.com/sites/all/themes/espressif/logo-black.svg" alt="Espressif ESP32" width="200"></a></p>
