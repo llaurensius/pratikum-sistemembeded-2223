@@ -1,5 +1,5 @@
 # Analisa
-a-capasitivetouchsensor
+a-capasitivetouchsensor - Hanya membaca sentuhan yang dilakukan dan menampilkan di serial monitor
 ```
 // ESP32 Touch Test
 // Just test touch pin - Touch0 is T0 which is on GPIO 4. 
@@ -9,16 +9,17 @@ delay(1000); // give me time to bring up serial monitor
 Serial.println("ESP32 Touch Test");
 }
 void loop() {
-Serial.println(touchRead(4));  // get value of Touch 0 pin = GPIO 4 
+Serial.println(touchRead(4));  // menampilkan nilai dari sentuhan yang ada di pin GPIO 4
 delay(1000);
 }
 ```
 
-a-capasitivetouchsensorled1
+
+a-capasitivetouchsensorled1 - Jika disentuh maka LED akan menyala ketika disentuh dan tidak menyala jika tidak disentuh
 ```
-// set pin numbers
-const int touchPin = 4; 
-const int ledPin = 16;
+// menginisiasi pin GPIO yang akan dipakai
+const int touchPin = 4; //Pin GPIO yang mendeteksi sentuhan
+const int ledPin = 16; //Pin GPIO yang akan menyalan LED sebagai keluaran
 
 // change with your threshold value
 const int threshold = 20;
@@ -28,16 +29,16 @@ int touchValue;
 void setup(){
   Serial.begin(115200);
   delay(1000); // give me time to bring up serial monitor
-  // initialize the LED pin as an output:
+  // Inisiasi LED sebagai keluaran
   pinMode (ledPin, OUTPUT);
 }
 
 void loop(){
-  // read the state of the pushbutton value:
+  // membaca sensor sentuhan
   touchValue = touchRead(touchPin);
   Serial.print(touchValue);
-  // check if the touchValue is below the threshold
-  // if it is, set ledPin to HIGH
+  // mengecek apakah ada nilai dari sentuhan
+  // jika ada maka LED akan menyala
   if(touchValue < threshold){
     // turn LED on
     digitalWrite(ledPin, HIGH);
@@ -53,9 +54,9 @@ void loop(){
 ```
 
 
-a-capasitivetouchsensorled2
+a-capasitivetouchsensorled2 - LED Running
 ```
-// set pin numbers
+// menginisiasi pin GPIO yang akan dipakai
 const int touchPin = 4; 
 const int ledPin1 = 16;
 const int ledPin2 = 18;
@@ -69,18 +70,17 @@ int touchValue;
 void setup(){
   Serial.begin(115200);
   delay(1000); // give me time to bring up serial monitor
-  // initialize the LED pin as an output:
+  // menginisiasi pin GPIO LED sebagai keluaran
   pinMode (ledPin1, OUTPUT);
   pinMode (ledPin2, OUTPUT);
   pinMode (ledPin3, OUTPUT);
 }
 
 void loop(){
-  // read the state of the pushbutton value:
+  // membaca nilai sentuhan
   touchValue = touchRead(touchPin);
   Serial.print(touchValue);
-  // check if the touchValue is below the threshold
-  // if it is, set ledPin to HIGH
+  // mengecek dengan logika IF ELSE dan akan menyalan LED jika terdapat sentuhan
   if(touchValue < threshold){
     // turn LED on
     Serial.println(" - LED on");
