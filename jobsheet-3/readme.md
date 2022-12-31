@@ -51,7 +51,7 @@ void loop() {
   delay(5000);
 }
 ```
-_Serial Monitor_ <br />
+_Serial Monitor_ &nbsp;
 ![js3.1](https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.1/3.1.jpg)
 
     B. Menghubungkan ESP32 dengan Jaringan WiFi
