@@ -43,6 +43,9 @@ void loop() {
   delay(5000);
 }
 ```
+![js3.1](https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.1/3.1.jpg)
+
+
 ## Analisa
 
 ## Kesimpulan
