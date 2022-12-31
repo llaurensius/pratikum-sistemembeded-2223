@@ -165,7 +165,7 @@ void loop() {
 
 E.	Mengirim Data Sensor ke Database<br /><br />
 *Program*
-```
+```c
 // Import required libraries
 #include <WiFi.h>
 #include <ESPAsyncWebServer.h>
@@ -208,6 +208,8 @@ String readDHTHumidity() {
  return String(h);
  }
 }
+```
+```html
 const char index_html[] PROGMEM = R"rawliteral(
 <!DOCTYPE HTML><html>
 <head>
@@ -271,6 +273,8 @@ setInterval(function ( ) {
 }, 10000 ) ;
 </script>
 </html>)rawliteral";
+```
+```c
 // Replaces placeholder with DHT values
 String processor(const String& var){
  //Serial.println(var);
