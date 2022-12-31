@@ -221,6 +221,11 @@ CAYENNE_OUT_DEFAULT()
 ```
 
 # Kesimpulan
+Dalam pratikum ini disimpulkan bahwa pemrogaman untuk IoT dapat dikembangkan lebih lanjut, dengan protokol komunikasi antar ESP32 melalui ESP-NOW dan dapat dikembangkan untuk saling bertukar data dengan memanfaatkan nilai dari sensor DHT11. Kedepannya dapat dikembangkan untuk mengirimkan data sensor-sensor lainnya.
 
+Nilai dari sensor DHT11 dibaca oleh dashboard Cayenne yang dikirimkan oleh ESP32 Koordinator.
 
 # Dokumentasi
+
+https://user-images.githubusercontent.com/118155742/210124601-eee6d110-c30e-48f0-9464-878043d8c443.mp4
+
