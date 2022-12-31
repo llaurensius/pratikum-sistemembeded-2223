@@ -12,7 +12,7 @@
 
 ## Hasil Percobaan
 * A.	ESP32 Wi-Fi Modes dan Wifi-Scan
-* *Program*
+*Program*
 ```c
 #include "WiFi.h"
 void setup() {
