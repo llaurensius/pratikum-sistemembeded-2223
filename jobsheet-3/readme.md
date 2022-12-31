@@ -51,10 +51,11 @@ void loop() {
   delay(5000);
 }
 ```
-_Serial Monitor_ &nbsp;
+*Serial Monitor*
 ![js3.1](https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.1/3.1.jpg)
 
-    B. Menghubungkan ESP32 dengan Jaringan WiFi
+B. Menghubungkan ESP32 dengan Jaringan WiFi<br /><br />
+*Program*
  ```c
     #include <WiFi.h>
     // Replace with your network credentials (STATION)
@@ -80,6 +81,7 @@ _Serial Monitor_ &nbsp;
      // put your main code here, to run repeatedly:
     }
 ```
+*Serial Monitor*
 ![js3.2](https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.2/3.2.jpg)
     
 
