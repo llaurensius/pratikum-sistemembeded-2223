@@ -14,6 +14,7 @@
 ## List Jobsheet
 
  - [Jobsheet 1 - DASAR PEMROGRAMAN ESP32 UNTUK PEMROSESAN DATA INPUT/OUTPUT ANALOG DAN DIGITAL](https://github.com/llaurensius/pratikum-sistemembeded-2223/tree/main/jobsheet-1)
+ - [Jobsheet 1.1 - JARINGAN SENSOR NIRKABEL MENGGUNAKAN ESP-NOW](https://github.com/llaurensius/pratikum-sistemembeded-2223/tree/main/jobsheet-1.1)
  - [Jobsheet 2 - PROTOKOL KOMUNIKASI DAN SENSOR](https://github.com/llaurensius/pratikum-sistemembeded-2223/tree/main/jobsheet-2)
  - [Jobsheet 3 - TOPOLOGI JARINGAN LOKAL DAN WIFI](https://github.com/llaurensius/pratikum-sistemembeded-2223/tree/main/jobsheet-3)
  - [Jobsheet 4 - ESP32 -> Cayenne (MQTT) -> SENSOR (DHT11) + LED (ON/OFF) -> BUTTON DI WEBSITE MONITORING](https://github.com/llaurensius/pratikum-sistemembeded-2223/tree/main/jobsheet-4)
