@@ -3,7 +3,7 @@
 <h1 align="center">
   <br>
   Laporan Praktikum Embedded System 2022/2023
-  <p>&nbsp;</p> 
+  &nbsp;  
   <br>
   <a href="https://main.polines.ac.id/"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Logo-Polines-96dpi-200px.png" alt="Polines" width="200"></a>
   <br>
