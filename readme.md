@@ -2,9 +2,6 @@
 Proyek tugas kuliah mata kuliah Sistem Embeded Progam Studi D4 Teknik Telekomunikasi  Politeknik Negeri Semarang
 
 
-[![ESPRESSIF](https://www.espressif.com/sites/all/themes/espressif/logo-black.svg)](https://www.espressif.com/en/products/socs/esp32)
-
-
 ## List Jobsheet
 
  - [Jobsheet 1 - DASAR PEMROGRAMAN ESP32 UNTUK PEMROSESAN DATA INPUT/OUTPUT ANALOG DAN DIGITAL](https://github.com/llaurensius/pratikum-sistemembeded-2223/tree/main/jobsheet-1)
@@ -15,3 +12,4 @@ Proyek tugas kuliah mata kuliah Sistem Embeded Progam Studi D4 Teknik Telekomuni
  - [Jobsheet 6 - ESP32 -> THINGSPEAK (HTTP/REST) -> SENSOR (DHT11)](https://github.com/llaurensius/pratikum-sistemembeded-2223/tree/main/jobsheet-6)
  - [Jobsheet 7 - ESP-NOW + IoT (MANY TO ONE + SENSOR -> ESP32 COORDINATOR -> MQTT -> CAYENNE)](https://github.com/llaurensius/pratikum-sistemembeded-2223/tree/main/jobsheet-7)
 
+[![ESPRESSIF](https://www.espressif.com/sites/all/themes/espressif/logo-black.svg)](https://www.espressif.com/en/products/socs/esp32)
