@@ -1,6 +1,6 @@
 
 # Jobsheet 5
-ADAFRUIT.IO (MQTT) + IFTTF + SENSOR (DHT11) + SUARA (GOOGLE ASSITANT)
+ADAFRUIT.IO (MQTT) + IFTTT -> SENSOR (DHT11) + LED (ON/OFF) -> SUARA (GOOGLE ASSITANT)
 
 [![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white)](https://www.arduino.cc/)
 
