@@ -165,7 +165,7 @@ void loop() {
 
 E.	Mengirim Data Sensor ke Database<br /><br />
 *Program*
-```c
+```
 // Import required libraries
 #include <WiFi.h>
 #include <ESPAsyncWebServer.h>
