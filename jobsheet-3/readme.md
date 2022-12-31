@@ -313,10 +313,10 @@ void loop(){
 }
 ```
 *Serial Monitor*
-![sm](https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.5/js3.5.jpg)
+![sm](https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.5/js3.5.jpg)<br />
 *Tampilan Web PC*
-![pc](https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.5/web.jpg)
-*Tampilan Web Smartphone*
+![pc](https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.5/web.jpg)<br />
+*Tampilan Web Smartphone*<br />
 ![hp](https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.5/web%20hp.jpg)
     
 
