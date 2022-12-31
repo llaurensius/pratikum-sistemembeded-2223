@@ -10,23 +10,26 @@ JARINGAN SENSOR NIRKABEL MENGGUNAKAN ESP-NOW
 - [Laurensius Liquori - 4.31.20.0.13](https://github.com/llaurensius)
 
 # Analisa
-Dalam koding ini berfungsi untuk mengetahui MAC Address yang terdapat di ESP32
+
 ```
-#include "WiFi.h" //library yang digunakan hanya WiFi.h
-void setup(){
-Serial.begin(115200);
-WiFi.mode(WIFI_MODE_STA); //mengaktifkan mode WiFi Station
-Serial.println(WiFi.macAddress()); //print MAC Address di Serial Monirot
-}
-void loop(){ 
-}
+
 ```
 
 
 # Kesimpulan
-MAC Address diperlukan untuk identifikasi perangkat ESP32 dalam protokol komunikasi ESP-NOW, dengan MAC Address kita bisa mengirim data ke ESP32 lainnya melalui protokol ESP-NOW
 
 
 # Dokumentasi
+## Receive
+![500000](https://user-images.githubusercontent.com/118155742/210127901-444d1674-53e9-433c-8b2d-fafd67f2d557.jpg)
 
-![MAC ADDRESS](https://user-images.githubusercontent.com/118155742/210126557-2fee30cf-cfcf-4cdf-b783-71a9ca477aa7.png)
+Dokumentasi Video
+
+[![Dokumentasi Receive](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://youtube.com/shorts/u8l7PD0T5oc?feature=share)
+
+## Transmitter
+![test](https://user-images.githubusercontent.com/118155742/210127905-9a06ed43-51f1-4c68-a107-5ef8157ab890.jpg)
+
+Dokumentasi Video
+
+[![Dokumentasi Transmitter](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://youtube.com/shorts/mjIHEiJML1Q?feature=share)
