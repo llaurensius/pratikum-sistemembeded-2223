@@ -215,25 +215,25 @@ const char index_html[] PROGMEM = R"rawliteral(
 <head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-integrity="sha384-
-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-crossorigin="anonymous">
- <style>
- html {
- font-family: Arial;
- display: inline-block;
- margin: 0px auto;
- text-align: center;
- }
- h2 { font-size: 3.0rem; }
- p { font-size: 3.0rem; }
- .units { font-size: 1.2rem; }
- .dht-labels{
- font-size: 1.5rem;
- vertical-align:middle;
- padding-bottom: 15px;
- }
- </style>
+ integrity="sha384-
+ fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+ crossorigin="anonymous">
+  <style>
+   html {
+   font-family: Arial;
+   display: inline-block;
+   margin: 0px auto;
+   text-align: center;
+   }
+   h2 { font-size: 3.0rem; }
+   p { font-size: 3.0rem; }
+   .units { font-size: 1.2rem; }
+   .dht-labels{
+   font-size: 1.5rem;
+   vertical-align:middle;
+   padding-bottom: 15px;
+   }
+  </style>
 </head>
 <body>
  <h2>ESP32 DHT Server</h2>
@@ -251,7 +251,7 @@ crossorigin="anonymous">
  </p>
 </body>
 <script>
-setInterval(function ( ) {
+ setInterval(function ( ) {
  var xhttp = new XMLHttpRequest();
  xhttp.onreadystatechange = function() {
  if (this.readyState == 4 && this.status == 200) {
@@ -260,8 +260,8 @@ setInterval(function ( ) {
  };
  xhttp.open("GET", "/temperature", true);
  xhttp.send();
-}, 10000 ) ;
-setInterval(function ( ) {
+ }, 10000 ) ;
+ setInterval(function ( ) {
  var xhttp = new XMLHttpRequest();
  xhttp.onreadystatechange = function() {
  if (this.readyState == 4 && this.status == 200) {
@@ -270,7 +270,7 @@ setInterval(function ( ) {
  };
  xhttp.open("GET", "/humidity", true);
  xhttp.send();
-}, 10000 ) ;
+ }, 10000 ) ;
 </script>
 </html>)rawliteral";
 ```
@@ -316,9 +316,9 @@ void loop(){
 
 }
 ```
-*Serial Monitor*
+*Serial Monitor*<br /><br />
 ![sm](https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.5/js3.5.jpg)<br /><br />
-*Tampilan Web PC*
+*Tampilan Web PC*<br /><br />
 ![pc](https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.5/web.jpg)<br /><br />
 *Tampilan Web Smartphone*<br /><br />
 <img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.5/web%20hp.jpg" alt="hp" height="500px">
