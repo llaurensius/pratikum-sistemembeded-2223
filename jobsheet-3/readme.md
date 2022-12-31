@@ -1,4 +1,3 @@
-<p align="center">
 # Jobsheet 3 
 TOPOLOGI JARINGAN LOKAL DAN WIFI
 
@@ -9,5 +8,3 @@ TOPOLOGI JARINGAN LOKAL DAN WIFI
 
 [Azarya Paska Saputra - 4.31.20.0.05](https://github.com/azpaska)
 [Laurensius Liquori - 4.31.20.0.13](https://github.com/llaurensius)
-
-</p>
