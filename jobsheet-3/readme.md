@@ -14,7 +14,8 @@
 
 A.	ESP32 Wi-Fi Modes dan Wifi-Scan<br /><br />
 <details>
-  <summary>*Program*</summary>
+  <summary>Program (click to open)</summary>
+
 ```c
 #include "WiFi.h"
 void setup() {
