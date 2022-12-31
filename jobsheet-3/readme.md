@@ -6,6 +6,7 @@
 
 ## Daftar Isi
   * [Hasil Percobaan](#hasil-percobaan)
+    * [A. ESP32 Wi-Fi Modes dan Wifi-Scan](#a.-esp32-wi-fi-modes-dan-wifi-scan)
   * [Analisa](#analisa)
   * [Kesimpulan](#kesimpulan)
 
