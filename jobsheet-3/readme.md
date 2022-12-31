@@ -83,6 +83,27 @@ B. Menghubungkan ESP32 dengan Jaringan WiFi<br /><br />
 ```
 *Serial Monitor*
 ![js3.2](https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.2/3.2.jpg)
+
+C.	Menghubungkan Kembali (Re-connect) ESP32 dengan Jaringan Wi-Fin<br /><br />
+*Program*
+```c
+```
+*Serial Monitor*
+![]()
+
+D.	Mengganti Hostname ESP32<br /><br />
+*Program*
+```c
+```
+*Serial Monitor*
+![]()
+
+E.	Mengirim Data Sensor ke Database<br /><br />
+*Program*
+```c
+```
+*Serial Monitor*
+![]()
     
 
 
