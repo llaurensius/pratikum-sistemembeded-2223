@@ -3,9 +3,9 @@
 <h1 align="center">
   Laporan Praktikum Embedded System 2022/2023
 </h1>
-
+<p>&nbsp;</p>
 <p align="center"><a href="https://main.polines.ac.id/"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Logo-Polines-96dpi-200px.png" alt="Polines" width="200"></a></p>
-
+<p>&nbsp;</p>
 <h4 align="center">Proyek Tugas Mata Kuliah Sistem Embeded Progam Studi D4 Teknik Telekomunikasi <a href="https://main.polines.ac.id/en_us/" target="_blank">Politeknik Negeri Semarang</a>.</h4>
 <p>&nbsp;</p>
 
@@ -27,4 +27,4 @@
  
  <p>&nbsp;</p> 
  
- <p align="center"><a href="https://www.espressif.com/en/products/socs/esp32"><img src="https://www.espressif.com/sites/all/themes/espressif/logo-black.svg" alt="Espressif ESP32" width="200"></a></p>
+ <p align="center"><a href="https://www.espressif.com/en/products/socs/esp32"><img src="https://www.espressif.com/sites/all/themes/espressif/logo-black.svg" alt="Espressif ESP32" width="500"></a></p>
