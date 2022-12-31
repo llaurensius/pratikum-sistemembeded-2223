@@ -13,7 +13,8 @@
 ## Hasil Percobaan
 
 A.	ESP32 Wi-Fi Modes dan Wifi-Scan<br /><br />
-*Program*
+<details>
+  <summary>*Program*</summary>
 ```c
 #include "WiFi.h"
 void setup() {
@@ -51,6 +52,8 @@ void loop() {
   delay(5000);
 }
 ```
+                          </details>
+ 
 *Serial Monitor*
 ![js3.1](https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.1/3.1.jpg)
 
