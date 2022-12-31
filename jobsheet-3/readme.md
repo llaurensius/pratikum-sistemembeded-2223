@@ -1,10 +1,11 @@
-# Jobsheet 3 
-TOPOLOGI JARINGAN LOKAL DAN WIFI
+<h1 align="center"> Jobsheet 3 </h1> <br>
+<p align="center">
+  <a href="https://gitpoint.co/">
+    <img alt="GitPoint" title="GitPoint" src="http://i.imgur.com/VShxJHs.png" width="450">
+  </a>
+</p>
 
-[![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white)](https://www.arduino.cc/)
+<p align="center">
+  GitHub in your pocket. Built with React Native.
+</p>
 
-
-## Anggota Kelompok
-
-- [Azarya Paska Saputra - 4.31.20.0.05](https://github.com/azpaska)
-- [Laurensius Liquori - 4.31.20.0.13](https://github.com/llaurensius)
