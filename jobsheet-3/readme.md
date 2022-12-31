@@ -59,7 +59,7 @@ void loop() {
 *Serial Monitor*
 ![js3.1](https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.1/3.1.jpg)
 
-B. Menghubungkan ESP32 dengan Jaringan WiFi<br /><br />
+B. Menghubungkan ESP32 dengan Jaringan WiFi
 <details>
   <summary>Program (click to open)</summary>
  
@@ -94,8 +94,10 @@ B. Menghubungkan ESP32 dengan Jaringan WiFi<br /><br />
 *Serial Monitor*
 ![js3.2](https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.2/3.2.jpg)
 
-C.	Menghubungkan Kembali (Re-connect) ESP32 dengan Jaringan Wi-Fin<br /><br />
-*Program*
+C.	Menghubungkan Kembali (Re-connect) ESP32 dengan Jaringan Wi-Fi
+<details>
+  <summary>Program (click to open)</summary>
+ 
 ```c
 #include <WiFi.h>
 
@@ -136,11 +138,15 @@ void loop() {
   }
 }
 ```
+</details>
+ 
 *Serial Monitor*
 ![js3.3](https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.3/js3.3.jpg)
 
-D.	Mengganti Hostname ESP32<br /><br />
-*Program*
+D.	Mengganti Hostname ESP32
+<details>
+  <summary>Program (click to open)</summary>
+ 
 ```c
 #include <WiFi.h>
 // Replace with your network credentials (STATION)
@@ -170,11 +176,15 @@ void loop() {
  // put your main code here, to run repeatedly:
 }
 ```
+</details>
+ 
 *Hasil*
 ![js3.4](https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.4/js3.4.jpg)
 
 E.	Mengirim Data Sensor ke Database<br /><br />
-*Program*
+<details>
+  <summary>Program (click to open)</summary>
+ 
 ```c
 // Import required libraries
 #include <WiFi.h>
@@ -326,6 +336,8 @@ void loop(){
 
 }
 ```
+</details>
+ 
 *Serial Monitor*<br /><br />
 ![sm](https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.5/js3.5.jpg)<br /><br />
 *Tampilan Web PC*<br /><br />
