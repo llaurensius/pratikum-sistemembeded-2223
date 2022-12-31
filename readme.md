@@ -2,7 +2,7 @@
 Proyek tugas kuliah mata kuliah Sistem Embeded Progam Studi D4 Teknik Telekomunikasi  Politeknik Negeri Semarang
 
 
-[![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white)](https://www.arduino.cc/)
+[![ESPRESSIF](https://www.espressif.com/sites/all/themes/espressif/logo-black.svg)](https://www.espressif.com/en/products/socs/esp32)
 
 
 ## List Jobsheet
