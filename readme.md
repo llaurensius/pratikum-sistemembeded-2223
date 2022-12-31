@@ -9,7 +9,7 @@
   <br>
 </h1>
 
-<h4 align="center">Proyek Tugas Mata kuliah Sistem Embeded Progam Studi D4 Teknik Telekomunikasi <a href="https://main.polines.ac.id/en_us/" target="_blank">Politeknik Negeri Semarang</a>.</h4>
+<h4 align="center">Proyek Tugas Mata Kuliah Sistem Embeded Progam Studi D4 Teknik Telekomunikasi <a href="https://main.polines.ac.id/en_us/" target="_blank">Politeknik Negeri Semarang</a>.</h4>
 <p>&nbsp;</p>
 
 ## List Jobsheet
