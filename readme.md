@@ -1,16 +1,18 @@
 
 
 <h1 align="center">
-  <br>
   Laporan Praktikum Embedded System 2022/2023
-  <p>&nbsp;</p>
-  <br>
-  <a href="https://main.polines.ac.id/"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Logo-Polines-96dpi-200px.png" alt="Polines" width="200"></a>
-  <br>
 </h1>
-
+<p>&nbsp;</p>
+<p align="center"><a href="https://main.polines.ac.id/"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Logo-Polines-96dpi-200px.png" alt="Polines" width="200"></a></p>
+<p>&nbsp;</p>
 <h4 align="center">Proyek Tugas Mata Kuliah Sistem Embeded Progam Studi D4 Teknik Telekomunikasi <a href="https://main.polines.ac.id/en_us/" target="_blank">Politeknik Negeri Semarang</a>.</h4>
 <p>&nbsp;</p>
+
+## Anggota Kelompok
+
+- [Azarya Paska Saputra - 4.31.20.0.05](https://github.com/azpaska)
+- [Laurensius Liquori - 4.31.20.0.13](https://github.com/llaurensius)
 
 ## List Jobsheet
 
@@ -24,5 +26,5 @@
  - [Jobsheet 7 - ESP-NOW + IoT (MANY TO ONE + SENSOR -> ESP32 COORDINATOR -> MQTT -> CAYENNE)](https://github.com/llaurensius/pratikum-sistemembeded-2223/tree/main/jobsheet-7)
  
  <p>&nbsp;</p> 
-
-[![ESPRESSIF](https://www.espressif.com/sites/all/themes/espressif/logo-black.svg)](https://www.espressif.com/en/products/socs/esp32)
+ 
+ <p align="center"><a href="https://www.espressif.com/en/products/socs/esp32"><img src="https://www.espressif.com/sites/all/themes/espressif/logo-black.svg" alt="Espressif ESP32" width="500"></a></p>
