@@ -5,6 +5,7 @@
 - [Laurensius Liquori - 4.31.20.0.13](https://github.com/llaurensius)
 
 ## Hasil Percobaan
+### A.	ESP32 Wi-Fi Modes dan Wifi-Scan
 
 ## Analisa
 
