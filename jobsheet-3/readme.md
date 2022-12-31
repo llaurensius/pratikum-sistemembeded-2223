@@ -12,7 +12,7 @@
 
 ## Hasil Percobaan
 
-A.	ESP32 Wi-Fi Modes dan Wifi-Scan<br /><br />
+A.	ESP32 Wi-Fi Modes dan Wifi-Scan
 <details>
   <summary>Program (click to open)</summary>
 
