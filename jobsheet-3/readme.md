@@ -178,7 +178,7 @@ void loop() {
 ```
 </details>
  
-*Hasil*
+*Hasil*<br /><br />
 ![js3.4](https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.4/js3.4.jpg)
 
 E.	Mengirim Data Sensor ke Database<br /><br />
