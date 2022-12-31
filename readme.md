@@ -12,6 +12,11 @@
 <h4 align="center">Proyek Tugas Mata Kuliah Sistem Embeded Progam Studi D4 Teknik Telekomunikasi <a href="https://main.polines.ac.id/en_us/" target="_blank">Politeknik Negeri Semarang</a>.</h4>
 <p>&nbsp;</p>
 
+## Anggota Kelompok
+
+- [Azarya Paska Saputra - 4.31.20.0.05](https://github.com/azpaska)
+- [Laurensius Liquori - 4.31.20.0.13](https://github.com/llaurensius)
+
 ## List Jobsheet
 
  - [Jobsheet 1 - DASAR PEMROGRAMAN ESP32 UNTUK PEMROSESAN DATA INPUT/OUTPUT ANALOG DAN DIGITAL](https://github.com/llaurensius/pratikum-sistemembeded-2223/tree/main/jobsheet-1)
