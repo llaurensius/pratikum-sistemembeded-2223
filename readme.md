@@ -21,5 +21,7 @@
  - [Jobsheet 5 - ESP32 -> ADAFRUIT.IO (MQTT) + IFTTT -> SENSOR (DHT11) + LED (ON/OFF) -> SUARA (GOOGLE ASSITANT)](https://github.com/llaurensius/pratikum-sistemembeded-2223/tree/main/jobsheet-5)
  - [Jobsheet 6 - ESP32 -> THINGSPEAK (HTTP/REST) -> SENSOR (DHT11)](https://github.com/llaurensius/pratikum-sistemembeded-2223/tree/main/jobsheet-6)
  - [Jobsheet 7 - ESP-NOW + IoT (MANY TO ONE + SENSOR -> ESP32 COORDINATOR -> MQTT -> CAYENNE)](https://github.com/llaurensius/pratikum-sistemembeded-2223/tree/main/jobsheet-7)
- &nbsp;
+ 
+ <p>&nbsp;</p> 
+
 [![ESPRESSIF](https://www.espressif.com/sites/all/themes/espressif/logo-black.svg)](https://www.espressif.com/en/products/socs/esp32)
