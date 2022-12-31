@@ -4,7 +4,7 @@
   Laporan Praktikum Embedded System 2022/2023
 </h1>
 
- <a href="https://main.polines.ac.id/"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Logo-Polines-96dpi-200px.png" alt="Polines" width="200"></a>
+ <a href="https://main.polines.ac.id/" allign="center"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Logo-Polines-96dpi-200px.png" alt="Polines" width="200"></a>
 
 <h4 align="center">Proyek Tugas Mata Kuliah Sistem Embeded Progam Studi D4 Teknik Telekomunikasi <a href="https://main.polines.ac.id/en_us/" target="_blank">Politeknik Negeri Semarang</a>.</h4>
 <p>&nbsp;</p>
