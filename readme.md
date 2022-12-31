@@ -26,5 +26,5 @@
  - [Jobsheet 7 - ESP-NOW + IoT (MANY TO ONE + SENSOR -> ESP32 COORDINATOR -> MQTT -> CAYENNE)](https://github.com/llaurensius/pratikum-sistemembeded-2223/tree/main/jobsheet-7)
  
  <p>&nbsp;</p> 
-
-[![ESPRESSIF](https://www.espressif.com/sites/all/themes/espressif/logo-black.svg)](https://www.espressif.com/en/products/socs/esp32)
+ 
+ <p align="center"><a href="[https://main.polines.ac.id/](https://www.espressif.com/en/products/socs/esp32)"><img src="[https://upload.wikimedia.org/wikipedia/commons/f/f6/Logo-Polines-96dpi-200px.pn](https://www.espressif.com/sites/all/themes/espressif/logo-black.svg)g" alt="Polines" width="200"></a></p>
