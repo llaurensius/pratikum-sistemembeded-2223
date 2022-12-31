@@ -52,7 +52,7 @@ void loop() {
 ![js3.1](https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.1/3.1.jpg)
 
     B. Menghubungkan ESP32 dengan Jaringan WiFi
-    ```c
+ ```c
     #include <WiFi.h>
     // Replace with your network credentials (STATION)
     const char* ssid = "ka";
@@ -76,7 +76,7 @@ void loop() {
     void loop() {
      // put your main code here, to run repeatedly:
     }
-    ```
+```
    ![js3.2](https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.2/3.2.jpg)
     
 
