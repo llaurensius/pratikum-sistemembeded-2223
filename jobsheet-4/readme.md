@@ -19,13 +19,13 @@ Cayenne (MQTT) + SENSOR (DHT11) + LED (ON/OFF) + BUTTON di website monitoring
 Dalam percobaan kali ini menggunakan ESP32 yang terpasang sensor DHT11 berfungsi untuk membaca Suhu dan Temperature kemudian diteruskan oleh ESP32 melalui protokol MQTT (Cayenne) untuk agar bisa terhubung dan berkomunikasi antar mesin.
 
 Library yang dibutuhkan adalah 
-```
+```c
 #include "CayenneMQTTESP32.h" // library Cayenne untuk MQTT
 #include "DHT.h" // library DHT
 ```
 
 Kemudian mendefinisikan beberapa yang dibutuhkan seperti pin GPIO DHT akan disambungkan ke pin 4 di ESP32 lalu memilih tipe DHT lalu memilih pin GPIO untuk keluaran LED di pin 16.
-```
+```c
 #define CAYENNE_PRINT Serial
 #define DHTPIN 4     // what digital pin we're connected to
 #define DHTTYPE DHT11   // DHT 11
@@ -33,7 +33,7 @@ const int ledPin = 16;
 ```
 
 Lalu ESP memerlukan koneksi ke internet melalui WIFI yang ada dan autentifikasi ke Cayenne dengan memasukan username, password, dan clientID.
-```
+```c
 // WiFi network info.
 char ssid[] = "home-mnl";
 char wifiPassword[] = "h0m3-121";
@@ -45,11 +45,11 @@ char clientID[] = "82f43c00-8749-11ed-b193-d9789b2af62b";
 ```
 
  menginisiasi DHT berada di pin GPIO berapa dan tipe DHT nya
-```
+```c
 DHT dht(DHTPIN, DHTTYPE);
 ```
 
-```
+```c
 // Memulai sebuah fungsi yang dijalankan sekali dengan lalu lintas data berada pada 9600 baud rate.
 void setup() {
   Serial.begin(9600);
@@ -61,7 +61,7 @@ void setup() {
 ```
 
 Fungsi dibagian void loop adalah untuk membaca nilai sensor DHT 11
-```
+```c
 float h, t, f; 
 void loop() {
   Cayenne.loop(); // memerintahkan untuk fungsi Cayenne bekerja secara berulang-ulang
@@ -83,7 +83,7 @@ void loop() {
 ```
 
 Fungsi di bawah ini adalah untuk mengirimkan data nilai sensor DHT11 dan mengambil nilai button yang berada di Cayenne
-```
+```c
 //Mengirimkan data ke MQTT Cayenne dan menampilkannya di Dashboard Aplikasi Cayenne
 CAYENNE_OUT(1)
 {
