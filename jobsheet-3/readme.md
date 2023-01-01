@@ -349,4 +349,9 @@ void loop(){
 
 ## Analisa
 
+A.	ESP32 Wi-Fi Modes dan Wifi-Scan
+
+
 ## Kesimpulan
+
+## Tugas
