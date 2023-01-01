@@ -14,13 +14,13 @@ DASAR PEMROGRAMAN ESP32 UNTUK PEMROSESAN DATA INPUT/OUTPUT ANALOG DAN DIGITAL
 
 Fungsi void setup() dijalankan pada saat sketch atau program Arduino mulai. Fungsi ini digunakan untuk menginisiasi variabel, mendeklarasikan pin yang digunakan, menggunakan library, dll.
 
-```
+```c
 void setup() {
  ```
  
 Fungsi pinMode adalah menginisiasi GPIO yang akan dijadikan output.
 
- ```
+ ```c
   // initialize digital pin LED_BUILTIN as an output.
   pinMode(5, OUTPUT);
 }
@@ -28,13 +28,13 @@ Fungsi pinMode adalah menginisiasi GPIO yang akan dijadikan output.
 
 Fungsi void loop() dijalankan setelah fungsi setup() sudah selesai dijalankan, void loop() bertujuan untuk mengeksekusi dan menjalankan program yang sudah dibuat. Fungi ini akan secara aktif mengontrol board ESP32 membaca input atau merubah output.
 
-```
+```c
 void loop() {
 ```
 
 Fungsi digitalWrite adalah mengeksesi output (LED) untuk hidup dan mati.
 Fungsi dari delay adalah mengatur waktu berhenti sebelum mengeksekusi perintah selanjutnya.
-```
+```c
   digitalWrite(5, HIGH);   // turn the LED on (HIGH is the voltage level)
   delay(100);                       // wait for a second
   digitalWrite(5,LOW);    // turn the LED off by making the voltage LOW
@@ -47,18 +47,18 @@ Dalam percobaan selanjutnya LED akan berubah ubah jeda waktu antara hidup dan ma
 ## Analisa Push Button
 Fungsi void setup() dijalankan pada saat sketch atau program Arduino mulai. Fungsi ini digunakan untuk menginisiasi variabel, mendeklarasikan pin yang digunakan, menggunakan library, dll.
 
-```
+```c
 void setup() {
 ```
  
 Fungsi void loop() dijalankan setelah fungsi setup() sudah selesai dijalankan, void loop() bertujuan untuk mengeksekusi dan menjalankan program yang sudah dibuat. Fungi ini akan secara aktif mengontrol board EPS32 baik membaca input atau merubah output.
 
-```
+```c
 void loop() {
 ```
 
 Menginisiasi input dari ESP32 yang akan dibaca oleh ESP dengan perintah. Button akan terhubung di pin GPIO 15,2,4 dari ESP32 dan LED akan keluar pada pin GPIO 5,18,19
-```
+```c
 const int buttonPin1 = 15;  // the number of the pushbutton pin 
 const int buttonPin2 = 2;
 const int buttonPin3 = 4;
@@ -68,12 +68,12 @@ const int ledPin3 =  19;
 ```
 
 Buat variabel untuk menahan status button dengan nilai bawaan adalah 0
-```
+```c
 int buttonState = 0;
 ```
 
 Kemudian didefinisikan Button sebagai Input dan LED sebagai Output
-```
+```c
 pinMode(buttonPin1, INPUT);
 pinMode(buttonPin2, INPUT);
 pinMode(buttonPin3, INPUT);
@@ -84,7 +84,7 @@ pinMode(ledPin3, OUTPUT);
 ```
 
 Buat logika untuk menjalankan perintah dimana button 1 ketika ditekan maka LED pertama akan menyalan beberapa saat, kemudian jika button 2 ditekan maka LED akan melakukan BLINK dan jika button 3 ditekan maka LED akan berjalan running dari Kiri ke Kanan
-```
+```c
 // read the state of the pushbutton value 
 button1 = digitalRead(buttonPin1); 
 button2 = digitalRead(buttonPin2); 
@@ -120,7 +120,7 @@ if (button1 == HIGH) {
 Dalam Pemrogaman PWM kedua diberikan contoh untuk melihat efek PWM yaitu output lampu LED akan hidup dengan power dimulai dari 0% hingga 100% secara perlahan dan kembali dari 100% ke 0% secara perlahan dan berulang-ulang. Pada percobaan pertama diberikan contoh hanya dengan satu LED saja kemudian pada percobaan kedua diberikan contoh dengan 3 LED sekaligus
 
 Fungsi dari input data ditunjukan dalam koding
-```
+```c
 // increase the LED brightness
 for(int dutyCycle = 0; dutyCycle <= 255; dutyCycle++){   
 // changing the LED brightness with PWM 
@@ -137,7 +137,7 @@ delay(15);
 
 ## ADC DAC
 Dalam pekerjaan Analog Digital Converter dan Digital Analog Converter dicontohkan dengan membaca input dari sebuah potensiometer yang diterjemahkan secara digital melalui pemrogaman sebagai berikut.
-```
+```c
 potValue = analogRead(potPin); 
 delay(500);
 volt = potValue*5/4095;
@@ -149,7 +149,7 @@ Serial.println(volt);
 Fungsi ini akan membaca setiap putaran potensio dan menghasilkan angka sesuai dengan putaran potensiometer.
 
 Percobaan ADC DAC kedua mengimplementasikan angka yang dibaca oleh ESP32 menjadi nyala lampu LED, jika potensiometer diputar yang paling kecil maka LED tidak menyala dan sebaliknya jika potensiometer diputar pada kapasitas maksimum maka LED akan nyala paling terang. Koding untuk percobaan kedua yang berfungsi untuk membaca dan memberikan perintah ke LED untuk menyala adalah sebagai berikut.
-```
+```c
 sensorValue = analogRead(analogInPin); // read the analog in value:
 outputValue = map(sensorValue, 0, 4095, 0, 255); // map it to the range of the analog out:
 ledcWrite(ledChannel, outputValue); // change the analog out value:
