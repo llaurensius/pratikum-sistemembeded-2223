@@ -19,7 +19,7 @@ Dalam pratikum ini memakai protokol ESP-NOW berjumlah 3 buah ESP32 yang terbagia
 
 ### Sender/Transmitter
 
-```
+```c
 //Library yang dibutuhkan
 #include <esp_now.h>
 #include <esp_wifi.h>
@@ -146,7 +146,7 @@ void loop() {
 ```
 
 ## Receiver/Koordinator
-```
+```c
 //library yang dibutuhkan
 #include <esp_now.h>
 #include <WiFi.h>

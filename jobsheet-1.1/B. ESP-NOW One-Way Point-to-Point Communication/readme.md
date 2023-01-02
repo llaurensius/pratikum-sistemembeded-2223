@@ -13,14 +13,12 @@ JARINGAN SENSOR NIRKABEL MENGGUNAKAN ESP-NOW
 Dalam koding ini terdapat 2 buah ESP32 yang berfungsi sebagai receiver dan transmitter.
 
 ## Transmitter
-```
+```c
 //library yang dibutuhkan
 #include <esp_now.h>
 #include <WiFi.h>
-
 // MAC Address Koordinator ESP
 uint8_t broadcastAddress[] = {0x78, 0x21, 0x84, 0xBB, 0x45, 0xB8}; //78:21:84:BB:45:B8
-
 //Struktur yang digunakan untuk transfer data, harus sama antara transmitter dan receiver
 typedef struct struct_message {
   char a[32];
@@ -28,13 +26,10 @@ typedef struct struct_message {
   float c;
   bool d;
 } struct_message;
-
 // membuat struktur dengan nama myData
 struct_message myData;
-
 // membuat interface peer
 esp_now_peer_info_t peerInfo;
-
 // memberikan feedback apabila data berhasil dikirimkan
 void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status) {
   Serial.print("\r\nLast Packet Send Status:\t");
@@ -47,13 +42,11 @@ void setup() {
  
   // membuat sebagai mode WiFi station
   WiFi.mode(WIFI_STA);
-
   // inisialisasi ESP-NOW
   if (esp_now_init() != ESP_OK) {
     Serial.println("Error initializing ESP-NOW");
     return;
   }
-
   // mendapatkan status dari paket yang dikirim
   esp_now_register_send_cb(OnDataSent);
   
@@ -90,11 +83,10 @@ void loop() {
 ```
 
 ## Receiver
-```
+```c
 //library yang digunakan
 #include <esp_now.h> 
 #include <WiFi.h>
-
 // Struktur pesan yang akan dikirim, struktur harus sama 
 typedef struct struct_message {
 char a[32]; 
@@ -102,10 +94,8 @@ int b;
 float c; 
 bool d;
 } struct_message;
-
 // membuat variabel struktur menjadi myData 
 struct_message myData;
-
 // fungsi callback yang akan dieksekusi ketika ada pesan diterima
 void OnDataRecv(const uint8_t * mac, const uint8_t *incomingData, int len) { 
 memcpy(&myData, incomingData, sizeof(myData));
@@ -147,4 +137,3 @@ Dalam pratikum ini dibuktikan bahwa komunikasi berjalan satu arah dimana ESP32 s
 ![rx](https://user-images.githubusercontent.com/118155742/210127290-bb07c38e-59dd-478f-96fe-ef4244932c7d.png)
 ![tx](https://user-images.githubusercontent.com/118155742/210127291-e26165df-fbee-4638-abad-26a1709acefd.png)
 ![rx tx](https://user-images.githubusercontent.com/118155742/210127292-785ea30f-9b67-45d8-9d48-c00401da8780.jpg)
-
