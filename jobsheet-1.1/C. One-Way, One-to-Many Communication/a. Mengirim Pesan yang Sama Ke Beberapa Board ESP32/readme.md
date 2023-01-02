@@ -13,7 +13,7 @@ JARINGAN SENSOR NIRKABEL MENGGUNAKAN ESP-NOW
 Dalam koding ini terdapat 2 buah ESP32 yang berfungsi sebagai receiver dan transmitter.
 
 ## Transmitter
-```
+```c
 //library yang dibutuhkan
 #include <esp_now.h>
 #include <WiFi.h>
