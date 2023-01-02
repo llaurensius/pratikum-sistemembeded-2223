@@ -11,7 +11,7 @@ typedef struct test_struct {
   int y;
 } test_struct;
 
-test_struct test;
+test_struct myData;
 
 esp_now_peer_info_t peerInfo;
 
