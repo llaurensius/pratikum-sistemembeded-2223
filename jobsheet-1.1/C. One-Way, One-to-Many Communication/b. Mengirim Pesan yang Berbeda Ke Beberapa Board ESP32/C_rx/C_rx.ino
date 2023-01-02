@@ -6,17 +6,17 @@ typedef struct test_struct {
 int x; 
 int y;
 } test_struct;
-//Create a struct_message called myData 
+//Create a struct_message called test 
 test_struct test;
 //callback function that will be executed when data is received
 void OnDataRecv(const uint8_t * mac, const uint8_t *incomingData, int len) { 
-memcpy(&myData, incomingData, sizeof(myData));
+memcpy(&test, incomingData, sizeof(test));
 Serial.print("Bytes received: ");
 Serial.println(len);
 Serial.print("x: ");
-Serial.println(myData.x);
+Serial.println(test.x);
 Serial.print("y: ");
-Serial.println(myData.y);
+Serial.println(test.y);
 Serial.println(); 
 }
 void setup() {
