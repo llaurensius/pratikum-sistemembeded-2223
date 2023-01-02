@@ -30,7 +30,7 @@ typedef struct test_struct {
   int y;
 } test_struct;
 
-//Membuat struktur data dengan nama test
+//Membuat struktur data dengan nama myData
 test_struct myData;
 
 //Membuat variabel dengan tipe esp_now_peer_info_t untuk mengumpulkan informasi tentang peer
@@ -116,9 +116,10 @@ int x;
 int y;
 } test_struct;
 
-//Create a struct_message called myData 
+//Membuat struktur data dengan nama myData 
 test_struct myData;
-//callback function that will be executed when data is received
+
+//Membuat fungsi callback yang memberitahu data yang diterima
 void OnDataRecv(const uint8_t * mac, const uint8_t *incomingData, int len) { 
 memcpy(&myData, incomingData, sizeof(myData));
 Serial.print("Bytes received: ");
@@ -130,24 +131,30 @@ Serial.println(myData.y);
 Serial.println(); 
 }
 void setup() {
-//Initialize Serial Monitor 
+//Inisialisasi serial monitor untuk debugging
 Serial.begin(115200);
-//Set device as a Wi-Fi Station 
+
+//Membuat ESP32 sebagai WiFi Station
 WiFi.mode(WIFI_STA);
-//Init ESP-NOW
+
+//Inisialisasi ESP-NOW
 if (esp_now_init() != ESP_OK) {
   Serial.println("Error initializing ESP-NOW"); 
 return;
 }
-// Once ESPNow is successfully Init, we will register for recv CB to 
-// get recv packer info
+
+//Ketika ESP-Now berhasil maka akan menerima data dari transmitter
 esp_now_register_recv_cb(OnDataRecv); 
 }
 void loop() { 
 }
 ```
 # Kesimpulan
+Dalam pratikum ini ESP32 berkomunikasi melalui protokol ESP-NOW dengan 3 board  ESP32 mengirim di 1 ESP32. 
 
+Perangkat ESP akan berkomunikasi melalui WiFi yang saling terhubung satu sama lain dengan mengirimkan data random berupa angka random.
+
+Percobaan berhasil dengan mengirim data dari 3 ESP ke 1 ESP sesuai protokol ESP-NOW dan memmbuktikan bahwa EPS32 dapat saling berkomunikasi secara langsung
 
 
 # Dokumentasi
