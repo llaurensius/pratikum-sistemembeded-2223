@@ -14,24 +14,29 @@ Dalam pratikum ini menggunakan 4 buah ESP32 yang terdiri dari 3 sebagai sender/t
 
 ## Transmitter
 ```c
+//Library yang digunakan
 #include <esp_now.h>
 #include <WiFi.h>
 
+//MAC Address yang menjadi tujuan untuk protokol ini
 // REPLACE WITH YOUR ESP RECEIVER'S MAC ADDRESS
 uint8_t broadcastAddress1[] = {0x24, 0x6F, 0x28, 0x02, 0xC3, 0x1C}; //24:6F:28:02:C3:1C
 uint8_t broadcastAddress2[] = {0x24, 0x0A, 0xC4, 0XC6, 0x06, 0x54}; //24:0A:C4:C6:06:54
 uint8_t broadcastAddress3[] = {0x8C, 0xCE, 0x4E, 0xC8, 0x29, 0x1B}; //8C:CE:4E:C8:29:1B
 
+//membuat struktur data untuk mengirimkan pesan
 typedef struct test_struct {
   int x;
   int y;
 } test_struct;
 
+//membuat variabel struktur data bernama test
 test_struct test;
 
+//membuat variabel tipe esp_now_peer_info_t untuk menampung informasi terkait peer
 esp_now_peer_info_t peerInfo;
 
-// callback when data is sent
+//memberikan respon ketika data terkirim atau tidak terkirim di ESP koordinator
 void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status) {
   char macStr[18];
   Serial.print("Packet to: ");
@@ -44,33 +49,36 @@ void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status) {
 }
  
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(115200); //Inisialisasi serial monitor untuk debugging
  
-  WiFi.mode(WIFI_STA);
+  WiFi.mode(WIFI_STA); //Inisialisasi ESP32 sebagai WiFi Station
  
+ //Inisialisasi ESP-NOW
   if (esp_now_init() != ESP_OK) {
     Serial.println("Error initializing ESP-NOW");
     return;
   }
   
+  //Setelah ESP-NOW berhasil diinisialisasi, akan register ke fungsi respon OnDataSet() yang telah dibuat
   esp_now_register_send_cb(OnDataSent);
    
   // register peer
   peerInfo.channel = 0;  
   peerInfo.encrypt = false;
-  // register first peer  
+  
+  // register peer pertama
   memcpy(peerInfo.peer_addr, broadcastAddress1, 6);
   if (esp_now_add_peer(&peerInfo) != ESP_OK){
     Serial.println("Failed to add peer");
     return;
   }
-  // register second peer  
+  // register peer kedua
   memcpy(peerInfo.peer_addr, broadcastAddress2, 6);
   if (esp_now_add_peer(&peerInfo) != ESP_OK){
     Serial.println("Failed to add peer");
     return;
   }
-  /// register third peer
+  /// register peer ketiga
   memcpy(peerInfo.peer_addr, broadcastAddress3, 6);
   if (esp_now_add_peer(&peerInfo) != ESP_OK){
     Serial.println("Failed to add peer");
@@ -79,6 +87,7 @@ void setup() {
 }
  
 void loop() {
+//Mengirim data ke board yang berbeda-beda dengan mengirimkan struktur data yang berbeda-beda
   test_struct test1;
   test_struct test2;
   test_struct test3;
@@ -92,6 +101,7 @@ void loop() {
   test2.x = random(0,20);
   test2.y = random(0,20);
  
+ //Mengirimkan data ke receiver sekaligus mengecek apakah data berhasil dikirim
   esp_err_t result1 = esp_now_send(broadcastAddress1, (uint8_t *) &test1, sizeof(test_struct));
    
   if (result1 == ESP_OK) {
@@ -132,17 +142,20 @@ else {
 
 ## Receiver
 ```c
+//Library yang digunakan
 #include <esp_now.h> 
 #include <WiFi.h>
-//Structure example to receive data 
-//Must match the sender structure 
+
+//Struktur data yang akan dikirimkan
 typedef struct test_struct {
 int x; 
 int y;
 } test_struct;
-//Create a struct_message called test 
+
+//membuat struktur data menjadi variabel test
 test_struct test;
-//callback function that will be executed when data is received
+
+//fungsi untuk memberikan respon apabila data berhasil diterima
 void OnDataRecv(const uint8_t * mac, const uint8_t *incomingData, int len) { 
 memcpy(&test, incomingData, sizeof(test));
 Serial.print("Bytes received: ");
@@ -154,24 +167,27 @@ Serial.println(test.y);
 Serial.println(); 
 }
 void setup() {
-//Initialize Serial Monitor 
+//Inisialisasi Serial monitor untuk debugging 
 Serial.begin(115200);
-//Set device as a Wi-Fi Station 
+
+//Inisialisasi ESP sebagai WiFi Station
 WiFi.mode(WIFI_STA);
-//Init ESP-NOW
+
+//Inisialisasi ESP-NOW
 if (esp_now_init() != ESP_OK) {
   Serial.println("Error initializing ESP-NOW"); 
 return;
 }
-// Once ESPNow is successfully Init, we will register for recv CB to 
-// get recv packer info
+//register ke fungsi callback OnDataRecv() untuk memberitahukan bahwa data telah diterima
 esp_now_register_recv_cb(OnDataRecv); 
 }
 void loop() { 
 }
 ```
 # Kesimpulan
+Dalam pratikum yang memanfaatkan protokol ESP-NOW untuk mengirimkan data dari satu ESP ke beberapa ESP memberikan kesimpulan bahwa ESP dapat saling berkomunikasi ke beberapa board untuk mengirimkan data.
 
+Dalam pratikum kali ini data berhasil dikirimkan dari satu ESP dan diterima oleh tiga ESP, jika salah satu penerima ESP mati maka data tidak terkirim dari ESP pengirim.
 
 # Dokumentasi
 
