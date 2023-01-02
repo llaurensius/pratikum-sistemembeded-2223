@@ -95,7 +95,7 @@ void loop() {
 ```
 
 ## Receiver
-```
+```c
 #include <esp_now.h> 
 #include <WiFi.h>
 //Structure example to receive data 
