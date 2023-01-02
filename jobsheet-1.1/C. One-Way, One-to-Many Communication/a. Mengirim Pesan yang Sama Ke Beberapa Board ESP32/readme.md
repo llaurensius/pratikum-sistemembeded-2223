@@ -10,7 +10,7 @@ JARINGAN SENSOR NIRKABEL MENGGUNAKAN ESP-NOW
 - [Laurensius Liquori - 4.31.20.0.13](https://github.com/llaurensius)
 
 # Analisa
-Dalam koding ini terdapat 2 buah ESP32 yang berfungsi sebagai receiver dan transmitter.
+Dalam pratikum ini menggunakan 4 buah ESP32 dengan 3 sebagai sender/transmitter dan 1 sebagai receiver/koordinator
 
 ## Transmitter
 ```c
