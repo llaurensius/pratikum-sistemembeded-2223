@@ -19,14 +19,14 @@ JARINGAN SENSOR NIRKABEL MENGGUNAKAN ESP-NOW
 
 
 # Dokumentasi
-## Receive
+## DHT11 Read
 ![500000](https://user-images.githubusercontent.com/118155742/210127901-444d1674-53e9-433c-8b2d-fafd67f2d557.jpg)
 
 Dokumentasi Video
 
 [![Dokumentasi Receive](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://youtube.com/shorts/u8l7PD0T5oc?feature=share)
 
-## Transmitter
+## Tx & Rx DHT11 Data
 ![test](https://user-images.githubusercontent.com/118155742/210127905-9a06ed43-51f1-4c68-a107-5ef8157ab890.jpg)
 
 Dokumentasi Video
