@@ -33,17 +33,6 @@ void loop() {
  // Compute heat index in Celsius (isFahreheit = false)
  float hic = dht.computeHeatIndex(t, h, false);
  
-  if(t < 30){
-    // turn LED on
-    digitalWrite(ledPin, HIGH);
-    Serial.println(" - LED on");
-  }
-  else{
-    // turn LED off
-    digitalWrite(ledPin, LOW);
-    Serial.println(" - LED off");
-  }
- 
  Serial.print(F("Humidity: "));
  Serial.print(h);
  Serial.print(F("% Temperature: "));
