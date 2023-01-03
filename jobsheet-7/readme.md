@@ -2,8 +2,6 @@
 # Jobsheet 7
 ESP-NOW (MANY TO ONE) + CAYENNE + SENSOR (DHT11)
 
-[![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white)](https://www.arduino.cc/)
-
 
 ## Anggota Kelompok
 
