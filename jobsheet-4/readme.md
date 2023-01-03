@@ -108,3 +108,8 @@ Dalam pratikum ini disimpulkan bahwa ESP32 dapat digunakan untuk perangkat IoT y
 Pratikum ini contoh dengan membaca sensor DHT11 yang dikirimkan ke Cayenne dan Cayenne mengirimkan sebuah nilai (0/1) untuk memberikan perintah ESP32 untuk menghidupkan LED.
 # Dokumentasi
 ## ESP32 + MQTT (Cayenne) + Sensor Temperature, Humidity (DHT11) + LED (Output)
+
+
+https://user-images.githubusercontent.com/118155742/210387011-c6fe4b5c-6a4e-4b83-8972-4506f266e30c.mp4
+
+
