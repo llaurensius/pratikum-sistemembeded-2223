@@ -1,23 +1,27 @@
 # Analisa
 
 ```c
-// REQUIRES the following Arduino libraries:
-// - DHT Sensor Library: https://github.com/adafruit/DHT-sensor-library
-// - Adafruit Unified Sensor Lib: https://github.com/adafruit/Adafruit_Sensor
+//Library yang dibutuhkan
 #include "DHT.h"
-#define DHTPIN 4 // Digital pin connected to the DHT sensor
-// Uncomment whatever type you're using!
+
+//Pin yang terkoneksi dengan Sensor DHT
+#define DHTPIN 4
+
+//Tipe DHT yang digunakan
 #define DHTTYPE DHT11 // DHT 11
 //#define DHTTYPE DHT22 // DHT 22 (AM2302), AM2321
 //#define DHTTYPE DHT21 // DHT 21 (AM2301)
-DHT dht(DHTPIN, DHTTYPE);
+DHT dht(DHTPIN, DHTTYPE); //Inisialisasi DHT dengan PIN
 void setup() {
+
+//Inisialisasi Serial Monitor untuk debugging
  Serial.begin(9600);
  Serial.println(F("DHT11 Embedded System Test!"));
+ // Inisialisasi DHT
  dht.begin();
 }
 void loop() {
- // Wait a few seconds between measurements.
+ //Membaca nilai Sensor dari DHT11
  delay(2000);
  // Reading temperature or humidity takes about 250 milliseconds!
  // Sensor readings may also be up to 2 seconds 'old' (its a very slow sensor)
@@ -36,17 +40,7 @@ void loop() {
  // Compute heat index in Celsius (isFahreheit = false)
  float hic = dht.computeHeatIndex(t, h, false);
  
-  if(t < 30){
-    // turn LED on
-    digitalWrite(ledPin, HIGH);
-    Serial.println(" - LED on");
-  }
-  else{
-    // turn LED off
-    digitalWrite(ledPin, LOW);
-    Serial.println(" - LED off");
-  }
- 
+ //Print nilai data yang telah dibaca dari sensor ke serial monitor
  Serial.print(F("Humidity: "));
  Serial.print(h);
  Serial.print(F("% Temperature: "));
@@ -62,96 +56,37 @@ void loop() {
 ```
 
 ```c
-// REQUIRES the following Arduino libraries:
-// - DHT Sensor Library: https://github.com/adafruit/DHT-sensor-library
-// - Adafruit Unified Sensor Lib: https://github.com/adafruit/Adafruit_Sensor
+//Library yang dibutuhkan
 #include "DHT.h"
-#define DHTPIN 4 // Digital pin connected to the DHT sensor
-// Uncomment whatever type you're using!
+
+//Pin yang terkoneksi dengan sensor DHT
+#define DHTPIN 4
+
+//Tipe DHT yang digunakan
 #define DHTTYPE DHT11 // DHT 11
 //#define DHTTYPE DHT22 // DHT 22 (AM2302), AM2321
 //#define DHTTYPE DHT21 // DHT 21 (AM2301)
 DHT dht(DHTPIN, DHTTYPE);
-const int ledPin = 16;
 
-void setup() {
- Serial.begin(9600);
- Serial.println(F("DHT11 Embedded System Test!"));
- dht.begin();
-   pinMode (ledPin, OUTPUT);
-
-}
-void loop() {
- // Wait a few seconds between measurements.
- delay(2000);
- // Reading temperature or humidity takes about 250 milliseconds!
- // Sensor readings may also be up to 2 seconds 'old' (its a very slow sensor)
- float h = dht.readHumidity();
- // Read temperature as Celsius (the default)
- float t = dht.readTemperature();
- // Read temperature as Fahrenheit (isFahrenheit = true)
- float f = dht.readTemperature(true);
- // Check if any reads failed and exit early (to try again).
- if (isnan(h) || isnan(t) || isnan(f)) {
- Serial.println(F("Failed to read from DHT sensor!"));
- return;
- }
- // Compute heat index in Fahrenheit (the default)
- float hif = dht.computeHeatIndex(f, h);
- // Compute heat index in Celsius (isFahreheit = false)
- float hic = dht.computeHeatIndex(t, h, false);
- 
-  if(t < 30){
-    // turn LED on
-    digitalWrite(ledPin, HIGH);
-    Serial.println(" - LED on");
-  }
-  else{
-    // turn LED off
-    digitalWrite(ledPin, LOW);
-    Serial.println(" - LED off");
-  }
- 
- Serial.print(F("Humidity: "));
- Serial.print(h);
- Serial.print(F("% Temperature: "));
- Serial.print(t);
- Serial.print(F("°C "));
- Serial.print(f);
- Serial.print(F("°F Heat index: "));
- Serial.print(hic);
- Serial.print(F("°C "));
- Serial.print(hif);
- Serial.println(F("°F"));
-}
-```
-
-```c
-// REQUIRES the following Arduino libraries:
-// - DHT Sensor Library: https://github.com/adafruit/DHT-sensor-library
-// - Adafruit Unified Sensor Lib: https://github.com/adafruit/Adafruit_Sensor
-#include "DHT.h"
-#define DHTPIN 4 // Digital pin connected to the DHT sensor
-// Uncomment whatever type you're using!
-#define DHTTYPE DHT11 // DHT 11
-//#define DHTTYPE DHT22 // DHT 22 (AM2302), AM2321
-//#define DHTTYPE DHT21 // DHT 21 (AM2301)
-DHT dht(DHTPIN, DHTTYPE);
+//Pin yang terkoneksi dengan LED
 const int ledPin1 = 16;
 const int ledPin2 = 18;
 const int ledPin3 = 19;
 
 void setup() {
+//Inisialisasi Serial Monitor untuk debugging
  Serial.begin(9600);
  Serial.println(F("DHT11 Embedded System Test!"));
- dht.begin();
+ dht.begin(); //Inisialisasi DHT
+ 
+ //Memberikan perintah LED sebagai output
    pinMode (ledPin1, OUTPUT);
    pinMode (ledPin2, OUTPUT);
    pinMode (ledPin3, OUTPUT);
 
 }
 void loop() {
- // Wait a few seconds between measurements.
+ //Membaca sensor DHT 
  delay(2000);
  // Reading temperature or humidity takes about 250 milliseconds!
  // Sensor readings may also be up to 2 seconds 'old' (its a very slow sensor)
@@ -169,7 +104,8 @@ void loop() {
  float hif = dht.computeHeatIndex(f, h);
  // Compute heat index in Celsius (isFahreheit = false)
  float hic = dht.computeHeatIndex(t, h, false);
- 
+  
+  //Logika IF untuk membuat jika suhu dibawah 30° C maka LED akan berjalan running, ketika suhu diatas 30° C maka LED akan mati
   if(t < 30){
 Serial.println(" - LED on");
     digitalWrite(ledPin1, HIGH);
@@ -190,6 +126,7 @@ digitalWrite(ledPin3, LOW);
     Serial.println(" - LED off");
   }
  
+ //Print nilai sensor di serial monitor
  Serial.print(F("Humidity: "));
  Serial.print(h);
  Serial.print(F("% Temperature: "));
@@ -204,9 +141,19 @@ digitalWrite(ledPin3, LOW);
 }
 ```
 # Kesimpulan
+Sensor DHT11 berfungsi untuk membaca kelembapan dan suhu yang dapat di ESP32 untuk mengumpulkan data dan menjadikannya sebuah input untuk sebuah sistem seperti dalam contoh jika suhu dibawah 30° C maka LED akan berjalan runnning.
 
+Sensor DHT11 memiliki delay pembacaan sekitar 2 detik sehingga pembacaan realtime dengan di serial monitor akan mengalami delay.
 
 # Dokumentasi
+
+
+
+https://user-images.githubusercontent.com/118155742/210385142-87b808a2-a457-49f1-92b7-c72cc9861d21.mp4
+
+
+
+https://user-images.githubusercontent.com/118155742/210385152-b694ddc9-3420-4c04-ad43-1d4f44853ff2.mp4
 
 
 
