@@ -154,7 +154,7 @@ Dalam pratikum ini ESP32 berkomunikasi melalui protokol ESP-NOW dengan 3 board  
 
 Perangkat ESP akan berkomunikasi melalui WiFi yang saling terhubung satu sama lain dengan mengirimkan data random berupa angka random.
 
-Percobaan berhasil dengan mengirim data dari 3 ESP ke 1 ESP sesuai protokol ESP-NOW dan memmbuktikan bahwa EPS32 dapat saling berkomunikasi secara langsung
+Percobaan berhasil dengan mengirim data dari 3 ESP ke 1 ESP sesuai protokol ESP-NOW dan memmbuktikan bahwa EPS32 dapat saling berkomunikasi secara langsung dan jika salah satu perangkat pengirim mati maka yang diterima oleh ESP hanya 2 saja.
 
 
 # Dokumentasi
