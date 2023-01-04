@@ -195,6 +195,9 @@ void getReadings(){
 
 # Kesimpulan
 
+Dalam praktikum yang menggunakan protokol ESP-NOW memberikan kesimpulan bahwa ESP dapat saling berkomunasi dengan metode dua arah atau mengirim dan menerima data sekaligus.
+
+Dalam praktikum ini data berhasil dikirimkan dari satu ESP A ke ESP B, begitu juga ESP A dapat menerima data dari ESP B. Hal yang serupa juga terjadi pada ESP B, yaitu mengirim data ke ESP A dan menerima data dari ESP A
 
 # Dokumentasi
 ## DHT11 Read
