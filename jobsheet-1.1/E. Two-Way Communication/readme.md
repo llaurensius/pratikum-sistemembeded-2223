@@ -10,8 +10,59 @@ JARINGAN SENSOR NIRKABEL MENGGUNAKAN ESP-NOW
 
 # Analisa
 
-```
+Dalam praktikum ini, digunakan 2 buah ESP32 agar dapat saling berkomuniasi secara dua arah.
 
+## A. Membaca Sensor DHT11 
+
+```c
+#include "DHT.h" // Library yang dibutuhkan untuk run program
+#define DHTPIN 4 // Pin digital yang terhubung dengan pin data sensor
+#define DHTTYPE DHT11 // Tipe sensor DHT yang digunakan
+
+DHT dht(DHTPIN, DHTTYPE); // inisialisasi sensor DHT
+// inisialisasi setup koneksi ESP dengan laptop
+void setup() {
+ Serial.begin(115200);
+ Serial.println(F("DHT11 Embedded System Test!"));
+ dht.begin();
+}
+
+void loop() {
+ // memberi delay pada tiap pengukuran selama 2 detik
+ delay(2000);
+ 
+ // Membaca temperatur dan kelembaban membutuhkan waktu setidaknya 250ms
+ // Pembacaan sensor dapat melebihi 2 detik dikarenakan sensor lambat
+ float h = dht.readHumidity();
+ // Membaca temperature sebagai Celsius (bawaan)
+ float t = dht.readTemperature();
+ 
+ // Membaca temperatur sebagai Fahrenheit (isFahrenheit = true)
+ float f = dht.readTemperature(true);
+ 
+ // Mengecek apakah terjadi kegagalan pembacaan sensor dan melakukan pembacaan ulang.
+ if (isnan(h) || isnan(t) || isnan(f)) {
+ Serial.println(F("Failed to read from DHT sensor!"));
+ return;
+ }
+ 
+ // Compute heat index in Fahrenheit (the default)
+ float hif = dht.computeHeatIndex(f, h);
+ 
+ // Compute heat index in Celsius (isFahreheit = false)
+ float hic = dht.computeHeatIndex(t, h, false);
+ Serial.print(F("Humidity: "));
+ Serial.print(h);
+ Serial.print(F("% Temperature: "));
+ Serial.print(t);
+ Serial.print(F("°C "));
+ Serial.print(f);
+ Serial.print(F("°F Heat index: "));
+ Serial.print(hic);
+ Serial.print(F("°C "));
+ Serial.print(hif);
+ Serial.println(F("°F"));
+}
 ```
 
 
