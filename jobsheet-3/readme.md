@@ -352,7 +352,7 @@ void loop(){
 A.	ESP32 Wi-Fi Modes dan Wifi-Scan
  
  <img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.1/flowchart3.1.png" align="right"
-     alt="Flowchart" width="200">
+     alt="Flowchart" height="300">
  
 Pada ESP32, terdapat 3 mode akses untuk Wifi, yaitu WIFI_STA (station mode : ESP32 sebagai client yang terkoneksi ke access point), WIFI_AP (access point mode : ESP32 berperan sebagai access point), WIFI_STA_AP (access point and station : ESP32 dapat terkoneksi dengan access point yang lain). Pada percobaan kali ini, ESP32 digunakan sebagai client.
  
@@ -370,6 +370,30 @@ Untuk menjadikan ESP32 sebagai client, mode pada program yang digunakan yaitu WI
  Setelah terinisiasi, ESP32 sudah dalam mode station. Selanjutnya ESP32 akan melakukan scan network untuk melihat jaringan wifi sekitar beserta kekuatan sinyal atau RSSI. Dalam program ini, ESP32 hanya difungsikan untuk scan network dan belum mendapat perintah untuk terhubung pada known network.
  
  B. Menghubungkan ESP32 dengan Jaringan WiFi
+ 
+ <img src=" https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.2/flowchart3.2.png" align="right"
+     alt="Flowchart" height="300">
+ 
+ Pada percobaan kali ini, ESP32 digunakan sebagai client dan terhubung ke suatu jaringan WiFi. Seperti pada percobaan A. ESP32 Wi-Fi Modes dan Wifi-Scan, untuk percobaan kedua program ditambahkan informasi mengenai jaringan yang akan disambung.
+ 
+ ```c
+ #include <WiFi.h>
+const char* ssid = "ka"; // SSID atau nama jaringan WiFi yang akan disambungkan
+const char* password = "123456788"; // password WiFi
+void initWiFi() {
+  WiFi.mode(WIFI_STA); // perintah untuk mode akses client
+  WiFi.begin(ssid, password); // perintah untuk connect berdasarkan informasi SSID dan password yang sudah diberikan
+  Serial.print("Connecting to WiFi ..");
+  while (WiFi.status() != WL_CONNECTED) {
+  Serial.print('.');
+  delay(1000);
+  }
+Serial.println(WiFi.localIP());
+}
+ ```
+ 
+ Ketika scanning network dan ditemukan known network atau jaringan WiFi yang sudah diberikan pada program, ESP32 akan mencoba untuk terhubung. Saat gagal untuk menemukan knwon network, ESP32 akan terus melakukan scanning dan saat gagal untuk terhubung ESP32 akan terus mencoba untuk menghubungkan.
+ 
 
 ## Kesimpulan
 
