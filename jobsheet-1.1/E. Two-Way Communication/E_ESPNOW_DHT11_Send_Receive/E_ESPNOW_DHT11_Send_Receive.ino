@@ -3,28 +3,36 @@
 #include <DHT.h>
 #define DHTPIN 4
 #define DHTTYPE DHT11
+
 DHT dht(DHTPIN, DHTTYPE);
 // REPLACE WITH THE MAC Address of your receiver
 uint8_t broadcastAddress[] = {0x78, 0x21, 0x84, 0xBB, 0x3A, 0x94};
+
 // Define variables
 float temperature;
 float humidity;
+
 // Define variables to store incoming readings
 float incomingTemp;
 float incomingHum;
+
 // Variable to store if sending data was successful
 String success;
+
 //Structure example to send data
 //Must match the receiver structure
 typedef struct struct_message {
  float temp;
  float hum;
 } struct_message;
+
 // Create a struct_message sensors reading
 struct_message DHTReadings;
+
 // Create a struct_message to hold incoming sensor readings
 struct_message incomingReadings;
 esp_now_peer_info_t peerInfo;
+
 // Callback when data is sent
 void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status) {
  Serial.print("\r\nLast Packet Send Status:\t");
@@ -47,15 +55,19 @@ void OnDataRecv(const uint8_t * mac, const uint8_t *incomingData, int len) {
 void setup() {
  // Init Serial Monitor
  Serial.begin(115200);
+ 
  // Init DHT
  dht.begin();
+ 
  // Set device as a Wi-Fi Station
  WiFi.mode(WIFI_STA);
+ 
  // Init ESP-NOW
  if (esp_now_init() != ESP_OK) {
  Serial.println("Error initializing ESP-NOW");
  return;
  }
+ 
  // Once ESPNow is successfully Init, we will register for Send CB to
  // get the status of Trasnmitted packet
  esp_now_register_send_cb(OnDataSent);
@@ -70,6 +82,7 @@ void setup() {
  Serial.println("Failed to add peer");
  return;
  }
+ 
  // Register for a callback function that will be called when data is received
  esp_now_register_recv_cb(OnDataRecv);
 }
@@ -79,6 +92,7 @@ void loop() {
  // Set values to send
  DHTReadings.temp = temperature;
  DHTReadings.hum = humidity;
+ 
  // Send message via ESP-NOW
  esp_err_t result = esp_now_send(broadcastAddress, (uint8_t *) &DHTReadings,
 sizeof(DHTReadings));
