@@ -454,6 +454,21 @@ void initWiFi() {
 <img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.5/flowchart3.5.png" align="right"
      alt="Flowchart" height="300">
  
+ Pada percobaan kali ini, dilakukan percobaa mengirim data sendor ke database melalui jaringan WiFi. Metode penyambungan ke jaringan WiFi menggunakan seperti pada percobaan sebelumnya. Namun pada percobaan ini ditambahkan sensor untuk dikirimkan ke database. 
+ 
+```c 
+#include <WiFi.h> // library untuk menggunakan WiFi
+#include <ESPAsyncWebServer.h> // library untuk web server yang digunakan sebagai interface database
+#include <Adafruit_Sensor.h> // library untuk mengirim data sensor
+#include <DHT.h> // library untuk membaca sensor
+ ```
+Kemudian dilakukan inisisalisasi seperti pada percobaan sebelumnya dan percobaan pembacaan [sensor DHT](https://github.com/llaurensius/pratikum-sistemembeded-2223/tree/main/jobsheet-2/2.%20Mengakses%20Sensor%20DHT%2011%20(Single%20Wire%20atau%20BUS)
+
+<img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.5/skematik.jpg" align="center"
+     alt="Skematik" height="300">
+
+ 
+
  
  
 ## Kesimpulan
