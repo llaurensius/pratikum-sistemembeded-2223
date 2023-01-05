@@ -371,7 +371,7 @@ Untuk menjadikan ESP32 sebagai client, mode pada program yang digunakan yaitu WI
  
  B. Menghubungkan ESP32 dengan Jaringan WiFi
  
- <img src=" https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.2/flowchart3.2.png" align="right"
+ <img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.2/flowchart3.2.png" align="right"
      alt="Flowchart" height="300">
  
  Pada percobaan kali ini, ESP32 digunakan sebagai client dan terhubung ke suatu jaringan WiFi. Seperti pada percobaan A. ESP32 Wi-Fi Modes dan Wifi-Scan, untuk percobaan kedua program ditambahkan informasi mengenai jaringan yang akan disambung.
@@ -394,7 +394,36 @@ Serial.println(WiFi.localIP());
  
  Ketika scanning network dan ditemukan known network atau jaringan WiFi yang sudah diberikan pada program, ESP32 akan mencoba untuk terhubung. Saat gagal untuk menemukan knwon network, ESP32 akan terus melakukan scanning dan saat gagal untuk terhubung ESP32 akan terus mencoba untuk menghubungkan.
  
-
+ C.	Menghubungkan Kembali (Re-connect) ESP32 dengan Jaringan Wi-Fi
+ 
+ <img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.3/flowchart3.3.png" align="right"
+     alt="Flowchart" height="300">
+ 
+  Melanjutkan dari percobaan sebelumnya, pada percobaan kali ini ESP32 digunakan sebagai client dan terhubung ke suatu jaringan WiFi. Seperti pada percobaan B. Menghubungkan ESP32 dengan Jaringan WiFi, untuk percobaan ketiga program ditambahkan perintah untuk melakukan rekoneksi ketika jaringan terputus. Pada percobaan B ketika jaringan terputus maka ESP32 tidak akan melakukan rekoneksi karena belum terdapat perintah untuk rekoneksi, untuk percobaan ini ditambahkan perintah untuk melakukan rekoneksi.
+ 
+ ```c
+ void loop() {
+  unsigned long currentMillis = millis();
+  // if WiFi is down, try reconnecting every CHECK_WIFI_TIME seconds
+  if ((WiFi.status() != WL_CONNECTED) && (currentMillis - previousMillis >=interval)) {
+    Serial.print(millis());
+    Serial.println("Reconnecting to WiFi...");
+    WiFi.disconnect();
+    WiFi.reconnect();
+    previousMillis = currentMillis;
+  }
+ ```
+ ESP32 akan mengecek secara berkala berdasarkan waktu interval yang telah ditentukan
+ 
+  ```c
+unsigned long previousMillis = 0;
+unsigned long interval = 30000;
+ ```
+ 
+ Saat didapati bahwa ESP32 terputus dari jaringan WiFi maka ESP32 akan mencoba untuk melakukan rekoneksi hingga terhubung kembali.
+ 
+ D. 	Mengganti Hostname ESP32
+ 
 ## Kesimpulan
 
 ## Tugas
