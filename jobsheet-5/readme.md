@@ -22,6 +22,8 @@
 
 <details>
   <summary>click to expand</summary>
+ 
+```c 
 #include <ESP8266WiFi.h>
 #include "Adafruit_MQTT.h"
 #include "Adafruit_MQTT_Client.h"
@@ -166,7 +168,7 @@ void MQTT_connect() {
   }
   Serial.println("MQTT Connected!");
 }
- 
+ ```
  </details>
 
 ## Hasil Percobaan
