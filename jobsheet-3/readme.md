@@ -841,15 +841,15 @@ void loop() {
 #### Hasil
   
   Serial monitor <br><br>
-  <img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/tugas/tugas%20js%203.1.jpg"   alt="hasil" height="300">
+  <img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/tugas/tugas%20js%203.1.jpg"   alt="hasil" widht="300">
   
-  <img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/tugas/tugas%20js%203.2.jpg"   alt="hasil" height="300">
+  <img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/tugas/tugas%20js%203.2.jpg"   alt="hasil" width="300">
   
   AP Mode<br><br>
-  <img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/tugas/tugas%20js%203.3.jpg"   alt="hasil" height="300">
+  <img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/tugas/tugas%20js%203.3.jpg"   alt="hasil" width="200">
   
   Station Mode<br><br>
-    <img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/tugas/tugas%20js%203.4.jpg" alt="hasil" height="300">
+    <img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/tugas/tugas%20js%203.4.jpg" alt="hasil" width="200">
   
   
   
