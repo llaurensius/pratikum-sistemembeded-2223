@@ -1,5 +1,6 @@
 # Analisa
 
+## Membaca Sensor DHT11
 ```c
 //Library yang dibutuhkan
 #include "DHT.h"
@@ -55,6 +56,8 @@ void loop() {
 }
 ```
 
+
+## Membaca Sensor DHT11 sebagai input untuk menjalankan LED Running
 ```c
 //Library yang dibutuhkan
 #include "DHT.h"
@@ -143,7 +146,7 @@ digitalWrite(ledPin3, LOW);
 # Kesimpulan
 Sensor DHT11 berfungsi untuk membaca kelembapan dan suhu yang dapat di ESP32 untuk mengumpulkan data dan menjadikannya sebuah input untuk sebuah sistem seperti dalam contoh jika suhu dibawah 30° C maka LED akan berjalan runnning.
 
-Sensor DHT11 memiliki delay pembacaan sekitar 2 detik sehingga pembacaan realtime dengan di serial monitor akan mengalami delay.
+Sensor DHT11 memiliki delay pembacaan sekitar 2 detik sehingga pembacaan realtime dengan di serial monitor akan mengalami delay. Sensor DHT memiliki beberapa tipe dan tipe yang dipakai dalam pratikum ini adalah DHT11
 
 # Dokumentasi
 
