@@ -171,11 +171,11 @@ void MQTT_connect() {
 
 ## Hasil Percobaan
  
- #### Serial Monitor
+#### Serial Monitor
  
- #### Demo
- 
- <iframe width="320" height="560" src="https://www.youtube.com/embed/0MvtpEyyPJM" title="Demo ESP32: ADAFRUIT.IO (MQTT) + IFTTT" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+#### Demo
+
+ [![Project](http://img.youtube.com/vi/0MvtpEyyPJM/0.jpg)](http://www.youtube.com/watch?v=0MvtpEyyPJM "Video Title")
 
 ## Analisa
 
