@@ -12,7 +12,7 @@
 
 ## Hasil Percobaan
 
-A.	ESP32 Wi-Fi Modes dan Wifi-Scan
+#### A.	ESP32 Wi-Fi Modes dan Wifi-Scan
 <details>
   <summary>Program (click to open)</summary>
 
@@ -59,7 +59,7 @@ void loop() {
 *Serial Monitor*
 ![js3.1](https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.1/3.1.jpg)
 
-B. Menghubungkan ESP32 dengan Jaringan WiFi
+#### B. Menghubungkan ESP32 dengan Jaringan WiFi
 <details>
   <summary>Program (click to open)</summary>
  
