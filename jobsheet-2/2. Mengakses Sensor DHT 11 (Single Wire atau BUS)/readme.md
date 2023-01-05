@@ -1,5 +1,6 @@
 # Analisa
 
+## Membaca Sensor DHT11
 ```c
 //Library yang dibutuhkan
 #include "DHT.h"
@@ -55,6 +56,8 @@ void loop() {
 }
 ```
 
+
+## Membaca Sensor DHT11 sebagai input untuk menjalankan LED Running
 ```c
 //Library yang dibutuhkan
 #include "DHT.h"
