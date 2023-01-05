@@ -462,7 +462,7 @@ void initWiFi() {
 #include <Adafruit_Sensor.h> // library untuk mengirim data sensor
 #include <DHT.h> // library untuk membaca sensor
  ```
-Kemudian dilakukan inisisalisasi seperti pada percobaan sebelumnya dan percobaan pembacaan <a href="https://github.com/llaurensius/pratikum-sistemembeded-2223/tree/main/jobsheet-2/2.%20Mengakses%20Sensor%20DHT%2011%20(Single%20Wire%20atau%20BUS" target="_blank">sensor DHT</a>
+Kemudian dilakukan inisisalisasi seperti pada percobaan sebelumnya dan percobaan pembacaan <a href="https://github.com/llaurensius/pratikum-sistemembeded-2223/blob/main/jobsheet-2/2.%20Mengakses%20Sensor%20DHT%2011%20(Single%20Wire%20atau%20BUS)/readme.md" target="_blank">sensor DHT</a>
 
 <img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.5/skematik.jpg" align="center"
      alt="Skematik" height="200">
