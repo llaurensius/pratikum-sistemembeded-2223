@@ -6,7 +6,7 @@
 - [Laurensius Liquori - 4.31.20.0.13](https://github.com/llaurensius)
 
 ## Daftar Isi
-  * [Skematik](#skematik)
+  * [Rangkaian](#rangkaian)
   * [Program](#program)
   * [Hasil Percobaan](#hasil-percobaan)
   * [Analisa](#analisa)
@@ -172,6 +172,8 @@ void MQTT_connect() {
 ## Hasil Percobaan
  
 #### Serial Monitor
+
+<img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-5/serial%20monitor.jpg"   alt="serial monitor" width="300">
  
 #### Demo
 
