@@ -356,7 +356,20 @@ A.	ESP32 Wi-Fi Modes dan Wifi-Scan
  
 Pada ESP32, terdapat 3 mode akses untuk Wifi, yaitu WIFI_STA (station mode : ESP32 sebagai client yang terkoneksi ke access point), WIFI_AP (access point mode : ESP32 berperan sebagai access point), WIFI_STA_AP (access point and station : ESP32 dapat terkoneksi dengan access point yang lain). Pada percobaan kali ini, ESP32 digunakan sebagai client.
  
-
+Untuk menjadikan ESP32 sebagai client, mode pada program yang digunakan yaitu WIFI_STA
+ 
+ ```c
+ void setup() {
+  Serial.begin(115200);
+  WiFi.mode(WIFI_STA); // mode akses station
+  WiFi.disconnect(); // untuk memutus koneksi dengan access point sebelumnya
+  delay(100);
+  Serial.println("Setup done");
+}
+ ```
+ Setelah terinisiasi, ESP32 sudah dalam mode station. Selanjutnya ESP32 akan melakukan scan network untuk melihat jaringan wifi sekitar beserta kekuatan sinyal atau RSSI. Dalam program ini, ESP32 hanya difungsikan untuk scan network dan belum mendapat perintah untuk terhubung pada known network.
+ 
+ B. Menghubungkan ESP32 dengan Jaringan WiFi
 
 ## Kesimpulan
 
