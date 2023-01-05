@@ -582,6 +582,10 @@ void loop(){
 
 ## Tugas
 
+ #### Flowchart
+ <img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/tugas/flowcharttugas.png" align="left"
+     alt="Flowchart" height="300">
+ 
  #### Program
  
  <details>
@@ -834,5 +838,27 @@ void loop() {
 }
   ```
   </details>
+  
+#### Hasil
+  
+  Serial monitor
+  <img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/tugas/tugas%20js%203.1.jpg" align="left"
+     alt="hasil" height="300">
+  
+  <img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/tugas/tugas%20js%203.2.jpg" align="left"
+     alt="hasil" height="300">
+  
+  AP Mode
+  <img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/tugas/tugas%20js%203.3.jpg" align="left"
+     alt="hasil" height="300">
+  
+  Station Mode
+    <img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/tugas/tugas%20js%203.4.jpg" align="left"
+     alt="hasil" height="300">
+  
+  
+  
+  
+
  
  
