@@ -105,10 +105,10 @@ void loop()
 ## Hasil Percobaan
 
 #### Serial Monitor
-<img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-6/serial%20monitor.jpg"   alt="rangkaian" width="300">
+<img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-6/serial%20monitor.jpg"   alt="rangkaian" width="500">
 
 #### Thingspeak
-<img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-6/thingspeak.jpg"   alt="rangkaian" width="300">
+<img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-6/thingspeak.jpg"   alt="rangkaian" width="500">
 
 ## Analisa
 
