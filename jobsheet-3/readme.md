@@ -94,7 +94,7 @@ void loop() {
 *Serial Monitor*
 ![js3.2](https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.2/3.2.jpg)
 
-C.	Menghubungkan Kembali (Re-connect) ESP32 dengan Jaringan Wi-Fi
+#### C.	Menghubungkan Kembali (Re-connect) ESP32 dengan Jaringan Wi-Fi
 <details>
   <summary>Program (click to open)</summary>
  
@@ -143,7 +143,7 @@ void loop() {
 *Serial Monitor*
 ![js3.3](https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.3/js3.3.jpg)
 
-D.	Mengganti Hostname ESP32
+#### D.	Mengganti Hostname ESP32
 <details>
   <summary>Program (click to open)</summary>
  
@@ -181,7 +181,7 @@ void loop() {
 *Hasil*<br /><br />
 ![js3.4](https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.4/js3.4.jpg)
 
-E.	Mengirim Data Sensor ke Database<br /><br />
+#### E.	Mengirim Data Sensor ke Database<br /><br />
 <details>
   <summary>Program (click to open)</summary>
  
@@ -349,7 +349,7 @@ void loop(){
 
 ## Analisa
 
-A.	ESP32 Wi-Fi Modes dan Wifi-Scan
+#### A.	ESP32 Wi-Fi Modes dan Wifi-Scan
  
  <img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.1/flowchart3.1.png" align="right"
      alt="Flowchart" height="300">
@@ -369,7 +369,7 @@ Untuk menjadikan ESP32 sebagai client, mode pada program yang digunakan yaitu WI
  ```
  Setelah terinisiasi, ESP32 sudah dalam mode station. Selanjutnya ESP32 akan melakukan scan network untuk melihat jaringan wifi sekitar beserta kekuatan sinyal atau RSSI. Dalam program ini, ESP32 hanya difungsikan untuk scan network dan belum mendapat perintah untuk terhubung pada known network.
  
- B. Menghubungkan ESP32 dengan Jaringan WiFi
+ #### B. Menghubungkan ESP32 dengan Jaringan WiFi
  
  <img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.2/flowchart3.2.png" align="right"
      alt="Flowchart" height="300">
@@ -394,7 +394,7 @@ Serial.println(WiFi.localIP());
  
  Ketika scanning network dan ditemukan known network atau jaringan WiFi yang sudah diberikan pada program, ESP32 akan mencoba untuk terhubung. Saat gagal untuk menemukan knwon network, ESP32 akan terus melakukan scanning dan saat gagal untuk terhubung ESP32 akan terus mencoba untuk menghubungkan.
  
- C.	Menghubungkan Kembali (Re-connect) ESP32 dengan Jaringan Wi-Fi
+ #### C.	Menghubungkan Kembali (Re-connect) ESP32 dengan Jaringan Wi-Fi
  
  <img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.3/flowchart3.3.png" align="right"
      alt="Flowchart" height="300">
@@ -422,7 +422,39 @@ unsigned long interval = 30000;
  
  Saat didapati bahwa ESP32 terputus dari jaringan WiFi maka ESP32 akan mencoba untuk melakukan rekoneksi hingga terhubung kembali.
  
- D. 	Mengganti Hostname ESP32
+ #### D. 	Mengganti Hostname ESP32
+ 
+ <img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.4/flowchart3.4.png" align="right"
+     alt="Flowchart" height="300">
+ 
+ Melanjutkan dari percobaan sebelumnya, pada percobaan ini hanya ditambahkan perintah untuk mengubah hostname atau nama ESP32 yang terlihat pada jaringan. Dari program sebelumnya hanya ditambahkan baris perintah untuk informasi nama hostname dan baris perintah inisialisasi.
+ 
+ ```c
+const char* ssid = "ka";
+const char* password = "123456788";
+String hostname = "ESP32 Node Temperature"; // informasi nama hostname yang akan digunakan
+void initWiFi() {
+ WiFi.mode(WIFI_STA);
+ WiFi.config(INADDR_NONE, INADDR_NONE, INADDR_NONE, INADDR_NONE);
+ WiFi.setHostname(hostname.c_str()); // inisialisasi hostname
+ WiFi.begin(ssid, password);
+ Serial.print("Connecting to WiFi ..");
+ while (WiFi.status() != WL_CONNECTED) {
+ Serial.print('.');
+ delay(1000);
+ }
+ Serial.println(WiFi.localIP());
+}
+  ```
+ 
+ Ketika didapati bahwa baris program untuk mengatur hostname tidak singkron, atau tidak tepat maka hostname ESP32 tidak akan berubah dan tetap menggunakan default hostname.
+ 
+#### E. Mengirim Data Sensor ke Database
+ 
+<img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-3/js3.5/flowchart3.5.png" align="right"
+     alt="Flowchart" height="300">
+ 
+ 
  
 ## Kesimpulan
 
