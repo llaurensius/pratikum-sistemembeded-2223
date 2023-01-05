@@ -6,7 +6,7 @@
 - [Laurensius Liquori - 4.31.20.0.13](https://github.com/llaurensius)
 
 ## Daftar Isi
-  * [Skematik](#skematik)
+  * [Rangkaian](#rangkaian)
   * [Program](#program)
   * [Hasil Percobaan](#hasil-percobaan)
   * [Analisa](#analisa)
@@ -22,6 +22,8 @@
 
 <details>
   <summary>click to expand</summary>
+ 
+```c 
 #include <ESP8266WiFi.h>
 #include "Adafruit_MQTT.h"
 #include "Adafruit_MQTT_Client.h"
@@ -166,12 +168,14 @@ void MQTT_connect() {
   }
   Serial.println("MQTT Connected!");
 }
- 
+ ```
  </details>
 
 ## Hasil Percobaan
  
 #### Serial Monitor
+
+<img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-5/serial%20monitor.jpg"   alt="serial monitor" width="300">
  
 #### Demo
 
