@@ -156,6 +156,8 @@ rfid.PCD_StopCrypto1(); // stop encryption on PCD
 # Kesimpulan
 Pratikum ini memberikan kesimpulan dalam pembacaan sensor dapat menjadi suatu input bagi keluaran perangkat lainnya, seperti dalam RFID yang membaca kartu yang benar maka akan membuat LED dan Servo bergerak sesuai dengan yang diperintahkan.
 
+Dalam pratik sesungguhnya, RFID dapat dikembangkan sebagai trigger bagi keluaran lain seperti dalam ini sensor RFID bisa menjadi trigger bagi servo dan LED
+
 
 # Dokumentasi
 
