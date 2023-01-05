@@ -350,6 +350,11 @@ void loop(){
 ## Analisa
 
 A.	ESP32 Wi-Fi Modes dan Wifi-Scan
+ 
+ <img src="[https://ai.github.io/size-limit/logo.svg](https://github.com/llaurensius/pratikum-sistemembeded-2223/blob/main/jobsheet-3/js3.1/flowchart3.1.png)" align="right"
+     alt="Flowchart" width="120" height="178">
+ 
+ Pada percobaan ini,
 
 
 ## Kesimpulan
