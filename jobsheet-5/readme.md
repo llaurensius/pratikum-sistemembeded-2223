@@ -175,7 +175,7 @@ void MQTT_connect() {
  
 #### Demo
 
- [![Project](http://img.youtube.com/vi/AZ7p4iju2fM/0.jpg)](http://www.youtube.com/watch?v=AZ7p4iju2fM "Video Title")
+ [![Project](http://img.youtube.com/vi/AZ7p4iju2fM/0.jpg)](http://www.youtube.com/watch?v=AZ7p4iju2fM)
 
 ## Analisa
 
