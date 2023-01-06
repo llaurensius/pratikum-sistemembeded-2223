@@ -176,6 +176,14 @@ void MQTT_connect() {
 #### Serial Monitor
 
 <img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-5/serial%20monitor.jpg"   alt="serial monitor" width="300">
+
+#### Adafruit.io
+
+<img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-5/adafruit.jpg"   alt="hasil" width="500">
+
+#### IFTTT
+ 
+<img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-5/ifttt.jpg"   alt="hasil" width="300">
  
 #### Demo
 
@@ -183,5 +191,88 @@ void MQTT_connect() {
 
 ## Analisa
 
+Pada percobaan kali ini, digunakan protokok MQTT agar ESP32 dapat berkomunikasi dengan perangkat lain melalui internet. MQTT (Message Queuing Telemetry Transport) protokol merupakan sebuah protokol yang berjalan diatas stack TCP/IP dan dirancang khusus untuk machine to machine yang tidak memiliki alamat khusus. Maksud dari kata tidak memiliki alamat khusus ini seperti halnya sebuah arduino, raspi atau device lain yang tidak memiliki alamat khusus. Sistem kerja MQTT menerapkan Publish dan Subscribe data. Dan pada penerapannya, device akan terhubung pada sebuah Broker dan mempunyai suatu Topic tertentu. Platform MQTT server yang digunakan adalah Adafruit.io. Pada percobaan ini, ESP32 akan mengirimkan data sensor DHT11 (suhu dan kelembaban) ke server MQTT (Adafruit.io) dan akan dicoba untuk melakukan kontrol LED melalui Adafruit.io
+
+Untuk menyambungkan ESP32 dengan Adafruit, ESP32 harus terhubung dengan jaringan WiFi dan server Adafruit
+
+ ```c
+// Library yang dibutuhkan
+#include <ESP8266WiFi.h>
+#include "Adafruit_MQTT.h"
+#include "Adafruit_MQTT_Client.h"
+#include <DHT.h>
+
+// Informasi WiFi yang akan disambung
+#define WLAN_SSID       "ALPHA 1" 
+#define WLAN_PASS       "wologito37"    
+
+// Informasi server, username, dan key Adafruit.io
+#define AIO_SERVER      "io.adafruit.com"
+#define AIO_SERVERPORT  1883              
+#define AIO_USERNAME    "azpaska"
+#define AIO_KEY         "aio_lFJJ47BKS9I94LwxwYjAxnT1N4Q2"
+
+// Pin Sensor DHT11 dan LED
+#define DHTPIN D5
+#define led1 D0
+#define led2 D1
+#define led3 D2
+ ```
+ 
+ Karena sistem kerja dari Adafruit.io adalah publish dan subscribe, maka perlu ditambahkan perintah publish dan subscribe pada program
+ 
+  ```c
+// Baris program untuk melakukan koneksi ke server Adafruit.io
+Adafruit_MQTT_Client mqtt(&client, AIO_SERVER, AIO_SERVERPORT, AIO_USERNAME, AIO_KEY);
+
+// Baris program untuk informasi publish (kirim data) ke Adafruit.io
+Adafruit_MQTT_Publish temperature = Adafruit_MQTT_Publish(&mqtt, AIO_USERNAME "/feeds/temperature");
+Adafruit_MQTT_Publish humidity = Adafruit_MQTT_Publish(&mqtt, AIO_USERNAME "/feeds/humidity");
+
+// Baris program untuk informasi subscribe (menerima data) dari Adafruit.io
+Adafruit_MQTT_Subscribe Light1 = Adafruit_MQTT_Subscribe(&mqtt, AIO_USERNAME"/feeds/LED-RED"); // Kontrol LED merah
+Adafruit_MQTT_Subscribe Light2 = Adafruit_MQTT_Subscribe(&mqtt, AIO_USERNAME "/feeds/LED-GREEN"); // Kontrol LED hijau
+Adafruit_MQTT_Subscribe Light3 = Adafruit_MQTT_Subscribe(&mqtt, AIO_USERNAME"/feeds/LED-BLUE"); // Kontrol LED biru
+Adafruit_MQTT_Subscribe Light = Adafruit_MQTT_Subscribe(&mqtt, AIO_USERNAME"/feeds/LED"); // Kontrol semua LED
+```
+
+Setelah semua informasi didapatkan, maka ESP32 akan mencoba melakukan koneksi dan komunikasi dengan server Adafruit.io
+
+```c
+void MQTT_connect() {
+  int8_t ret;
+  if (mqtt.connected()) {
+    return;
+  }
+
+  Serial.print("Connecting to MQTT... ");
+
+  uint8_t retries = 3;
+  while ((ret = mqtt.connect()) != 0) { // connect will return 0 for connected
+       Serial.println(mqtt.connectErrorString(ret));
+       Serial.println("Retrying MQTT connection in 5 seconds...");
+       mqtt.disconnect();
+       delay(5000);  // wait 5 seconds
+       retries--;
+       if (retries == 0) {
+         while (1);
+       }
+  }
+  Serial.println("MQTT Connected!");
+}
+```
+
+Saat semua program berjalan dengan baik, maka data ESP32 sudah dapat terlihat pada web Adafruit.io dan dapat melakukan kontrol LED melalui Adafruit.io. Kemudian ditambahkan IFTTT untuk mengontrol ESP32 mwnggunakan voice command yang tersambung dengan Google Assistant. Cara kerja IFTTT adalah mengontrol server Adafruit.io kemudian server akan melanjutkan ke ESP32.
+
 ## Kesimpulan
+
+Dari percobaan yang telah dilakukan, didapat kesimpulan sebagai berikut:
+
+- ESP32 dapat berkomunikasi melalui internet melalui suatu protokol. Protokol merupakan peraturan atau prosedur untuk mengirimkan sebuah data pada perangkat elektronik.
+
+- MQTT merukapan suatu protokol yang sangat ringan dan membutuhkan bandwidth yang sangat kecil, sehingga tidak memerlukan jaringan yang cepat. Namun dengan kekurangan protokol ini hanya bisa bertukar data informasi yaitu publish dan subscribe, tidak dapat malakukan operasi create dan delete.
+
+- Salah satu server protokol MQTT yang dapat digunakan adalah Adafruit.io, dengan cara kerja publish (mengirim data ke server) dan subscribe (menerima data dari server).
+
+- ESP32 dapat saling terhubung dengan platform lain melalui internet.
 
