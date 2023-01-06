@@ -109,6 +109,9 @@ void loop()
 
 #### Thingspeak
 <img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-6/thingspeak.jpg"   alt="rangkaian" width="500">
+<br><br>
+<a href="https://thingspeak.com/channels/1997038" target="_blank">thingspeak.com/channels/1997038</a>
+
 
 ## Analisa
  
