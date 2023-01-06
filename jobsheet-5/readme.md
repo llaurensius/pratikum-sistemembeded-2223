@@ -175,15 +175,15 @@ void MQTT_connect() {
  
 #### Serial Monitor
 
-<img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-5/serial%20monitor.jpg"   alt="serial monitor" width="300">
+<img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-5/serial%20monitor.jpg"   alt="serial monitor" width="600">
 
 #### Adafruit.io
 
-<img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-5/adafruit.jpg"   alt="hasil" width="500">
+<img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-5/adafruit.jpg"   alt="hasil" width="600">
 
 #### IFTTT
  
-<img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-5/ifttt.jpg"   alt="hasil" width="300">
+<img src="https://raw.githubusercontent.com/llaurensius/pratikum-sistemembeded-2223/main/jobsheet-5/ifttt.jpg"   alt="hasil" width="600">
  
 #### Demo
 
