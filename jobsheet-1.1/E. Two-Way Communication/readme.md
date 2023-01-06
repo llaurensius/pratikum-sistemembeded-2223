@@ -205,11 +205,12 @@ Dalam praktikum ini data berhasil dikirimkan dari satu ESP A ke ESP B, begitu ju
 
 Dokumentasi Video
 
-[![Dokumentasi Receive](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://youtube.com/shorts/u8l7PD0T5oc?feature=share)
+ [![Project](http://img.youtube.com/vi/u8l7PD0T5oc/0.jpg)](http://www.youtube.com/watch?v=u8l7PD0T5oc)
 
-## Tx & Rx DHT11 Data
+
+### Tx & Rx DHT11 Data
 ![test](https://user-images.githubusercontent.com/118155742/210127905-9a06ed43-51f1-4c68-a107-5ef8157ab890.jpg)
 
-Dokumentasi Video
+### Dokumentasi Video
 
-[![Dokumentasi Transmitter](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://youtube.com/shorts/mjIHEiJML1Q?feature=share)
+ [![Project](http://img.youtube.com/vi/mjIHEiJML1Q/0.jpg)](http://www.youtube.com/watch?v=mjIHEiJML1Q)
