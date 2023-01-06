@@ -221,7 +221,7 @@ Untuk menyambungkan ESP32 dengan Adafruit, ESP32 harus terhubung dengan jaringan
  
  Karena sistem kerja dari Adafruit.io adalah publish dan subscribe, maka perlu ditambahkan perintah publish dan subscribe pada program
  
-  ```c
+```c
 // Baris program untuk melakukan koneksi ke server Adafruit.io
 Adafruit_MQTT_Client mqtt(&client, AIO_SERVER, AIO_SERVERPORT, AIO_USERNAME, AIO_KEY);
 
